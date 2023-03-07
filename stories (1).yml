@@ -1,0 +1,110 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: askingcollege
+  steps:
+  - intent: common_question
+  - action: utter_anscommon
+
+- story: askingcollege1
+  steps:
+  - intent: moreaboutcollege
+  - action: utter_aboutcollege
+
+- story: askingcollege2
+  steps:
+  - intent: club_club
+  - action: utter_clubclub
+
+- story: askingcollege3
+  steps:
+  - intent: benfit_club
+  - action: utter_benfitclub
+  - intent: lit_club
+  - action: utter_litclub
+
+- story: campuslife
+  steps:
+  - intent: explore_campus
+  - action: utter_explorecampus
+  - intent: cafetarea
+  - action: utter_restaurent
+  - intent: boyshostel
+  - action: utter_boyshostel
+  - intent: girlshostel 
+  - action: utter_girlshostel
+  - intent: library
+  - action: utter_library
+
+- story: robotics
+  steps:
+  - intent: MNNIT_Robotics
+  - action: utter_MNNIT_Robotics
+
+- story: department
+  steps:
+  - intent: Department
+  - action: utter_department
+
+- story: food stall
+  steps:
+  - intent: Canteen
+  - action: utter_food
+  
+- story: ground
+  steps:
+  - intent: Play_Grounds
+  - action: utter_ground
+
+- story: ball
+  steps:
+  - intent: basketball
+  - action: utter_basket
+  - intent: Gym
+  - action: utter_gym
+
+- story: MNNIT
+  steps:
+  - intent: Cordinators_Robotics
+  - action: utter_cordinator
+
+  - intent: Director
+  - action: utter_director
+
+- story: Game
+  steps:
+  - intent: MNNIT_Game
+  - action: utter_MNNIT_Games
+
+- story: Biotechnology
+  steps:
+  - intent: Biotechnology_Department
+  - action: utter_Biotechnology_Department
