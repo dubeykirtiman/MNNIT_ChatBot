@@ -305,3 +305,9 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human? 
+ 
+ - intent: unknown
+   examples: |
+    - who is the prime minister of india
+    - who are you?
+    - what is the best food in the world?
