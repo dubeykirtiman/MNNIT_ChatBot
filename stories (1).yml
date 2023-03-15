@@ -108,3 +108,17 @@ stories:
   steps:
   - intent: Biotechnology_Department
   - action: utter_Biotechnology_Department
+
+- story: database storing the query
+  steps:
+  - intent: unknown
+  - action: utter_username
+  - slot_was_set:
+      - username: "sarthak"
+  - action: utter_username
+  - slot_was_set:
+      - usermail: "sarthak@gmail.com"
+  - action: utter_query
+  - slot_was_set:
+      - username: "who is the prime minister of india"
+  - action: action_query
