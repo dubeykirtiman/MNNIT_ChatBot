@@ -18,7 +18,16 @@ intents:
   - boyshostel
   - girlshostel 
   - library
+  - unknown
 
+slots:
+  username:
+    type: text
+  usermail:
+    type: text
+  query:
+    type: text
+ 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
@@ -162,7 +171,16 @@ responses:
     - text : " Biotechnology Department is the renowned Department of college which is present inside the academic building , Dr. Sangeeta Negi Bora is the HOD of Department 
              she is the professor of the biochemistry and its related topics"
 
+  utter_username:
+    - text  : "What is your name?"
 
+  utter_usermail:
+    - text  : "What is your gmail?"
+  
+  utter_query:
+    - text  : "What is your question?"
+actions:
+  - action_query
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
