@@ -104,10 +104,29 @@ stories:
   - intent: MNNIT_Game
   - action: utter_MNNIT_Games
 
+#- story: Biotechnology
+ # steps:
+  #- intent: Biotechnology_Department
+  #- action: utter_Biotechnology_Department
+
 - story: Biotechnology
   steps:
   - intent: Biotechnology_Department
   - action: utter_Biotechnology_Department
+  - slot_was_set:
+    - Biotech:  ["Biotechnology Department"]
+
+- story: happy play video path
+  steps:
+    - intent: play_video
+    - action: action_video
+
+- story: club/committee
+  steps:
+   - intent: Event
+   - action: utter_Event
+   - intent: committee
+   - action: utter_committee
 
 - story: database storing the query
   steps:
