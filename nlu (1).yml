@@ -296,6 +296,58 @@ nlu:
       - Biotech Department
       - HOD of Biotech Department
       - HOD of Biotechnology Department
+      
+  - intent: play_video
+  examples: |
+   - play the mentioned video
+   - open the url
+   - open the link in browser
+   - show me the video that i asked for
+
+- intent: out_of_scope
+  examples: |
+   - I want to order food
+   - what is 2 + 27
+   - who's the US President?
+
+- intent: chitchat/ask_name
+  examples: |
+   - what is your name?
+   - May I know your name?
+   - what do people call you ?
+   - Do you have a name for yourself?
+
+- intent: chitchat/ask_weather
+  examples: |
+   - What's the weather like today?
+   - Does it look sunny outside today ?
+   - oh, do you mind checking the weather for me please?
+   - I like sunny days in MNNIT.
+   - I like sunny days in Motilal Nehru National Institute of Technology.
+
+
+- intent: Event
+  examples: |
+   - How many Event is organise in the MNNIT Campus.
+   - Event
+   - which Fest is best of MNNIT.
+   - There is any tech fest 
+   - There is any cultural fest.
+   - Give the name of Popular fest of MNNIT.
+   - Popular Fest
+
+- intent: committee
+  examples: |
+   - How many committes are present in the mnnit.
+   - cultural club 
+   - cultural committee
+   - Dance Committee
+   - Drama Committee
+   
+- intent: Image of MNNIT
+  examples: |
+   - Image of MNNIT
+   - Academic Building of MNNIT Campus
  
 
 
