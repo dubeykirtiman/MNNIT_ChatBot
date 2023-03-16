@@ -19,6 +19,15 @@ intents:
   - girlshostel 
   - library
   - unknown
+  - play_video
+  - chitchat
+  - Image of MNNIT
+  
+  
+entities:
+  - name
+  - number
+  - location
 
 slots:
   username:
@@ -26,7 +35,14 @@ slots:
   usermail:
     type: text
   query:
+    type: text  
+  name:
     type: text
+  number:
+    type: text
+  location:
+    type: text
+
  
 responses:
   utter_greet:
@@ -179,8 +195,49 @@ responses:
   
   utter_query:
     - text  : "What is your question?"
-actions:
-  - action_query
+    
+#actions:
+#  - action_query
+  
+    utter_detail_thanks:
+    - text: "Thanks for providing the given details \nName: {Name},\nMobile Number: {Mobile_number}"
+
+  utter_out_of_scope:
+    - text: Sorry, I didn't get what you said. Please rephrase what you said.
+
+
+  utter_committee:
+    - text: "There are many committe in the campus. Different commmittee has different role and participate
+     in the cultural fest and other college fest like IITs, other NITs etc.
+      Committe Names are Given Below
+      1. Western Committe
+      2. Core Dramatics
+      3. Quinty
+      4. Darpan
+      5. Media House [MHM]
+      etc."
+    
+  utter_Event:
+    - text: "There are Many Event is organise in MNNIT and some are most popular fest and I am provide some details 
+     related to fest
+     1. Avishkar
+     2. Culrav
+     3. Hack36
+     4. GAC"
+  actions:
+    - action_submit
+    - action_video
+    - action_image
+    - action_query
+  forms:
+    user_details_form:
+      name:
+        - type: from_entity
+          entity: name
+      number:
+        - type: from_entity
+          entity: number
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
