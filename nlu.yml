@@ -1,0 +1,289 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent : hello
+  examples: |
+    - [Sitka] (locations)
+    - [Juneau] (locations)
+    - [Virginia] (locations)
+    - [Cusseta] (locations)
+    - [Chicago] (locations)
+    - [San Francisco] (locations)
+
+- intent: search_provider
+  examples: |
+    - I need a [hospital] (facility_type)
+    - find me a nearby [hospital] (facility_type)
+    - show me home health agencies (facility_type)
+    - [hospital] (facility_type)
+    - find me a nearby [hospitals] (facility_type) in [San Francisco] (locations)
+    - I need a [home health agency](facility_type)
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - i am going to die
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: tell_name
+  examples: |
+    
+    - hello
+    - what is your name?
+    - who are you??
+    - hey
+    - hi
+    - who are you??
+    - please tell me about yourself
+    - may i know your name
+    - name
+    
+
+
+- intent: my_name
+  examples: |
+    - sarthak
+    - my name is [ashish]{"entity":"name","value":"ashish"}
+    - my name is [rahul]{"entity":"name","value":"rahul"}
+    - my name is [apneet]{"entity":"name","value":"apneet"}
+    - [ashish]{"entity":"name","value":"ashish"} is my name
+    - [rahul]{"entity":"name","value":"rahul"} this side
+    - people call me [ashish]{"entity":"name","value":"ashish"}
+
+- intent: mobile_number
+  examples: |
+    - my number is [9848756789]{"entity":"number"}
+    -  [9848756789]{"entity":"number"}
+    -  [9848756789]{"entity":"number"} is my number
+    - my mobile number is  [9848756789]{"entity":"number"}
+    
+- intent: MNNIT_Robotics
+  examples: |
+    - there is any [Robotics club]{"entity":"location"} in the college
+    - best club
+    - tech club
+    - hardware club
+    - Data Science club
+    - Artificial Intelligence club 
+    - machine learning club
+    - there is any club inside the sac building
+    - sac building club
+
+- intent: Department
+  examples: |
+    - department name
+    - how many Deaprtment in the college
+    - How many Accademic department is present in the college
+    - How many Degree courses are available in the mnnit
+    - How many Degree courses are available in the college
+    - How many Degree courses are available in the campus
+    - Degree courses
+
+
+- intent: Canteen
+  examples: |
+    - how many canteen in the campus
+    - canteen 
+    - cafe
+    - food shop
+    - there is any place in the campus where you can buy delicious food
+    - Delicious food center
+    - how many canteen is available in the campus
+    
+# Sport Areas
+- intent: Play_Grounds
+  examples: |
+    - Athelete Ground
+    - Ground
+    - cricket ground
+    - tennis ground
+
+- intent: basketball
+  examples: |
+    - there is any basket ball court in the campus
+    - basket ball court
+    - court
+    - new basketball court
+    - old basketball court
+
+- intent: Gym
+  examples: |
+    - there is any gym 
+    - gym for boys 
+    - gym for girls
+    - exercise room 
+    - gym
+    - there is any place in the campus where you can do body building exercise
+
+- intent: Cordinators_Robotics
+  examples: |
+    - cordinators of robotics club
+    - cordinator of hardware club
+    - cordinator Name of robotics club
+    - cordinator Name of hardware club
+    - Final Year cordinator Name
+    - Who is the final year cordinator of hardware club
+    - Who is the final year cordinator of robotics club
+
+- intent: Director
+  examples: |
+    - Director of MNNIT
+    - Director
+    - person name who is govern rule in the campus
+    - Director Names
+    - Whos is the Director of MNNIT
+    - Who is the Director of college
+    - Who is the Director of MNNIT Campus
+
+
+- intent: MNNIT_Game
+  examples: |
+    - which games are played under the campus
+    - games
+    - how many games are played
+    - Games Name
+
+- intent: Biotechnology_Department
+  examples: |
+    - Biotechnology Department
+    - Biotech Department
+    - HOD of Biotech Department
+    - HOD of Biotechnology Department
+    
+- intent: play_video
+  examples: |
+   - play the mentioned video
+   - open the url
+   - open the link in browser
+   - show me the video that i asked for
+
+- intent: out_of_scope
+  examples: |
+   - I want to order food
+   - what is 2 + 27
+   - who's the US President?
+
+- intent: chitchat/ask_name
+  examples: |
+   - what is your name?
+   - May I know your name?
+   - what do people call you ?
+   - Do you have a name for yourself?
+
+- intent: chitchat/ask_weather
+  examples: |
+   - What's the weather like today?
+   - Does it look sunny outside today ?
+   - oh, do you mind checking the weather for me please?
+   - I like sunny days in MNNIT.
+   - I like sunny days in Motilal Nehru National Institute of Technology.
+
+
+- intent: Event
+  examples: |
+   - How many Event is organise in the MNNIT Campus.
+   - Event
+   - which Fest is best of MNNIT.
+   - There is any tech fest 
+   - There is any cultural fest.
+   - Give the name of Popular fest of MNNIT.
+   - Popular Fest
+
+- intent: committee
+  examples: |
+   - How many committes are present in the mnnit.
+   - cultural club 
+   - cultural committee
+   - Dance Committee
+   - Drama Committee
+   
+- intent: Image of MNNIT
+  examples: |
+   - Image of MNNIT
+   - Academic Building of MNNIT Campus
+
+   
