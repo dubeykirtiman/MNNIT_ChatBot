@@ -26,7 +26,36 @@ from mysql_connectivity import insertquery
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+class ActionTellName(Action):
 
+    def name(self) -> Text:
+        return "action_tell_name"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        name = tracker.get_slot("name")
+        message = " Hi {}! , what is your mobile number ? ".format(name)
+        print (message)
+        dispatcher.utter_message(text=message)
+        return []
+
+class ActionTellName(Action):
+
+    def name(self) -> Text:
+        return "action_tell_number"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        number = tracker.get_slot("number")
+        message = " Your mobile number is {} ".format(number)
+        print (message)
+        dispatcher.utter_message(text=message)
+        return []
+    
 class ActionVideo(Action):
     def name(self) -> Text:
         return "action_query"
