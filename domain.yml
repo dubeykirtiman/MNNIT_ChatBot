@@ -33,6 +33,7 @@ intents:
   - Biotechnology_Department
   - placement
   - askplaces
+  - tell_name
 
 entities: 
   - name
@@ -54,6 +55,7 @@ actions:
   - utter_aboutcollege
   - utter_clubclub
   - utter_placement
+  - utter_tellname
   - utter_my_name
   - utter_mobile_number
   - utter_thanks
@@ -67,7 +69,8 @@ actions:
   - utter_cordinator
   - utter_director
   - utter_Biotechnology_Department
-  - action_searchplaces
+  - action_tell_name
+  - action_tell_number
 
 responses:
   utter_greet:
@@ -159,11 +162,14 @@ responses:
   utter_library :
   - text: "Yes , there is a central library present in MNNIT Allahabad which has both - a huge repository of books for references and knowledge assimilation as well 
            as ebooks for or online learning. The library houses more than 1.2 lakh books, 14526 e-journals, and 29508 conference papers with stacks of accessories and reading materials. 
+   
               "
+  utter_tellname :
+  - text: "I am a chatbot , what is your name ? "
   utter_my_name:
-  - text : " your name is {name}"
+  - text : " Hi {name}! , what is your mobile number ? "
   utter_mobile_number:
-  - text : "Your mobile number is {number}"
+  - text : "yeah , Your mobile number is {number}"
   
   utter_thanks:
   - text : "Thanks for providing the value"
