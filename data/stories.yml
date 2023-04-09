@@ -1,0 +1,232 @@
+version: "2.0"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
+
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
+
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
+
+# - story: askingcollege
+#   steps:
+#   - intent: common_question
+#   - action: utter_anscommon
+
+# # - story: info
+# #   steps:
+# #   - intent: greet
+# #   - action: utter_greet
+# #   - intent: tell_name
+# #   - action: utter_tellname
+# #   - intent: my_name
+# #   - action: action_tell_name
+# #   - intent: mobile_number
+# #   - action: action_tell_number
+
+# - story: askingcollege1
+#   steps:
+#   - intent: moreaboutcollege
+#   - action: utter_aboutcollege
+
+# - story: askingcollege2
+#   steps:
+#   - intent: club_club
+#   - action: utter_clubclub
+
+# - story: askingcollege3
+#   steps:
+#   - intent: benfit_club
+#   - action: utter_benfitclub
+#   - intent: lit_club
+#   - action: utter_litclub
+
+# - story: campuslife
+#   steps:
+#   - intent: explore_campus
+#   - action: utter_explorecampus
+#   - intent: cafetarea
+#   - action: utter_restaurent
+#   - intent: boyshostel
+#   - action: utter_boyshostel
+#   - intent: girlshostel 
+#   - action: utter_girlshostel
+#   - intent: library
+#   - action: utter_library
+
+# - story: robotics
+#   steps:
+#   - intent: MNNIT_Robotics
+#   - action: utter_MNNIT_Robotics
+
+# - story: department
+#   steps:
+#   - intent: Department
+#   - action: utter_department
+
+# - story: food stall
+#   steps:
+#   - intent: Canteen
+#   - action: utter_food
+  
+# - story: ground
+#   steps:
+#   - intent: Play_Grounds
+#   - action: utter_ground
+
+# - story: ball
+#   steps:
+#   - intent: basketball
+#   - action: utter_basket
+#   - intent: Gym
+#   - action: utter_gym
+
+# - story: MNNIT
+#   steps:
+#   - intent: Cordinators_Robotics
+#   - action: utter_cordinator
+
+#   - intent: Director
+#   - action: utter_director
+
+# - story: Game
+#   steps:
+#   - intent: MNNIT_Game
+#   - action: utter_MNNIT_Games
+
+# - story: Biotechnology
+#   steps:
+#   - intent: Biotechnology_Department
+#   - action: utter_Biotechnology_Department
+
+# - story: placement
+#   steps:
+#   - intent: placement
+#   - action: utter_placement
+
+# - story: query_submit
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+  # - intent: query
+  # - intent: nlu_fallback
+  # - action: utter_out_of_scope
+  # - action: utter_username
+  # - intent: user_name
+  # - action: action_introduce
+  # - checkpoint: store_value
+  # - action: utter_usermail
+  # - intent: user_mail
+  # - action: utter_query
+  # - intent: user_query
+  # #   entities:
+  # #   - question: "who is the prime minister of india"
+  # # - slot_was_set:
+  # #     - question: "who is the prime minister of india"
+  # - action: action_submit
+  # - action: utter_thanks2
+
+# - story: query_fallback
+#   steps:
+#   - intent: nlu_fallback
+#   - action: utter_out_of_scope
+#   - checkpoint: ask_username
+
+# - story: query_username
+#   steps:
+#   - checkpoint: ask_username
+  # - action: utter_username
+  # - intent: user_name
+#     entities:
+#     - name: "sarthak"
+#   - slot_was_set:
+#       - name: "sarthak"
+#   - checkpoint: ask_usermail
+  
+# - story: query_usermail
+#   steps:
+#   - checkpoint: ask_usermail
+#   - action: utter_usermail
+#   - intent: user_mail
+#     entities:
+#     - usermail: "sarthak3110@gmail.com"
+#   - slot_was_set:
+#       - usermail: "sarthak3110@gmail.com"
+#   - checkpoint: ask_query
+
+# - story: query_query
+#   steps:
+#   - checkpoint: store_value
+#   - action: utter_query
+#   - intent: nlu_fallback
+#   - action: action_introduce2
+#   - action: utter_thanks2
+
+# - story: query_submit
+#   steps:
+#   - intent: nlu_fallback
+#   - action: utter_out_of_scope
+#   - action: action_fallback
+#   - slot:
+#       - question: "question"
+#   - action: utter_askquery
+#   - checkpoint: askordeny
+
+# - story: query_affirm
+#   steps:
+#   - checkpoint: askordeny
+#   - intent: affirm
+#   - action: utter_affirmquery
+
+# - story: query_deny
+#   steps:
+#   - checkpoint: askordeny
+#   - intent: deny
+#   - action: utter_denyquery
+#   - action: utter_username
+#   - intent: user_name
+#   - action: action_introduce
+#   - action: action_introduce2
+#   - action: utter_thanks2
+
+# - story: query_query
+#   steps:
+#   - checkpoint: store_value
+#   - action: utter_query
+#   - intent: nlu_fallback
+#   - action: action_introduce2
+#   - action: utter_thanks2
+
+#  - action: utter_username
+#   - intent: user_name
+#   - action: action_introduce
+#   - action: action_introduce2
+#   - action: utter_thanks2
+
+- story: query_submit
+  steps:
+  - intent: nlu_fallback
+  - action: utter_out_of_scope
+  - action: action_fallback
+  - action: utter_askquery
