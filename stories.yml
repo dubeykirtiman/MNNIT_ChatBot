@@ -16,8 +16,7 @@ stories:
   - intent: mood_unhappy
   - action: utter_cheer_up
   - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+  
 
 - story: sad path 2
   steps:
@@ -39,11 +38,22 @@ stories:
   - intent: greet
   - action: utter_greet
   - intent: tell_name
+  - action: utter_tell_intro
+  - intent: type_intro
   - action: utter_tellname
   - intent: my_name
   - action: action_tell_name
   - intent: mobile_number
   - action: action_tell_number
+
+- story: inform
+  steps:
+  - intent: tell_name
+  - action: utter_tell_intro
+  - intent: type_intro
+  - action: utter_tellname
+  - intent: my_name
+  - action: action_tell_name
 
 - story: askingcollege1
   steps:
@@ -66,6 +76,9 @@ stories:
   steps:
   - intent: explore_campus
   - action: utter_explorecampus
+
+- story: hostel
+  steps:
   - intent: cafetarea
   - action: utter_restaurent
   - intent: boyshostel
@@ -84,6 +97,11 @@ stories:
   steps:
   - intent: Department
   - action: utter_department
+
+- story: goodbye
+  steps:
+  - intent: deny
+  - action: utter_goodbye
 
 - story: food stall
   steps:
@@ -125,4 +143,78 @@ stories:
   - intent: placement
   - action: utter_placement
 
+- story: No Form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_no_worries
+  - action: utter_goodbye
+  - action: action_restart
 
+- story: Path 1 - Retry
+  steps:
+  - intent: healthquery
+  - action: health_form
+  - active_loop: health_form
+  - intent: outofscope
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: health_form
+  - active_loop: null
+  - action: utter_slots_values
+  - action: action_restart
+
+- story: Path 2 - Stop
+  steps:
+  - intent: healthquery
+  - action: health_form
+  - active_loop: health_form
+  - intent: outofscope
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_no_worries
+  - action: utter_goodbye
+  - action: action_restart
+
+- story: Avish
+  steps:
+  - intent: Avishkar
+  - action: utter_avishkar
+
+- story: achRobo
+  steps:
+  - intent: achievR
+  - action: utter_achievement
+
+- story: robo
+  steps:
+  - intent: eventrobomania
+  - action: utter_robomania
+
+- story: eventclub
+  steps:
+  - intent: eventcc
+  - action: utter_eventsincc
+
+- story: abtproject
+  steps:
+  - intent: projects
+  - action: utter_project
+
+- story: prasang
+  steps:
+  - intent: prasang
+  - action: utter_prosang
+
+- story: athlethead
+  steps:
+  - intent: athhead
+  - action: utter_athhead
+
+- story: athletics
+  steps:
+  - intent: achievAth
+  - action: utter_achieveA
