@@ -12,32 +12,18 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
-- rule: Activate form
+- rule: Activate health_form
   steps:
-  - intent: tell_name
-  - action: utter_name
-  - action: user_details_form
-  - active_loop: user_details_form
+  - intent: affirm
+  - action: health_form
+  - active_loop: health_form
 
-- rule: Submit form
+- rule: Submit health_form
   condition:
-  # Condition that form is active.
-  - active_loop: user_details_form
+  - active_loop: health_form
   steps:
-  # Form is deactivated
-  - action: user_details_form
+  - action: health_form
   - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  # The actions we want to run when the form is submitted.
-  - action: action_submit
+  - action: utter_slots_values
+  - action: action_restart
 
-- rule: out-of-scope
-  steps:
-  - intent: nlu_fallback
-  - action: utter_out_of_scope
-
-- rule: respond to chitchat
-  steps:
-  - intent: chitchat
-  - action: utter_chitchat
