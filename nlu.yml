@@ -19,7 +19,6 @@ nlu:
 
  - intent: goodbye
    examples: |
-    - good afternoon
     - cu
     - good by
     - cee you later
@@ -46,7 +45,6 @@ nlu:
     - n
     - never
     - I don't think so
-    - don't like that
     - no way
     - not really
 
@@ -163,7 +161,7 @@ nlu:
     - How many girls hostels are there in Mnnit Allahabad?
     - What facilities are provide in girls hostel of mnnit allahabad?
     - Tell me something about girls hostel
-    - How rooms are alloted in mnnit college?
+    - How rooms are alloted for girls in mnnit college?
     - What are the condition of girls hostel in mnnit college?
     - Is the condition of girls hostel good?
 
@@ -173,14 +171,19 @@ nlu:
     - How many books are present in library of MNNIT college?
     - How many e-journals and conference papers  are present in library of MNNIT college?
 
+ - intent: type_intro
+   examples: |
+    - Want to register
+    - want to tell about myself
+    - intro
+    - give intro
+    - submit my name
+
  - intent: tell_name
    examples: |
-    - hello
     - what is your name?
     - who are you??
-    - hey
-    - hi
-    - who are you??
+    - who are you?
     - please tell me about yourself
     - may i know your name
     - name
@@ -201,6 +204,7 @@ nlu:
       -  [9848756789]{"entity":"number"}
       -  [9848756789]{"entity":"number"} is my number
       - my mobile number is  [9848756789]{"entity":"number"}
+
       
  - intent: MNNIT_Robotics
    examples: |
@@ -223,6 +227,8 @@ nlu:
       - How many Degree courses are available in the college
       - How many Degree courses are available in the campus
       - Degree courses
+      - how many branches are present
+      - What are the branches present ?
 
 
  - intent: Canteen
@@ -294,6 +300,8 @@ nlu:
       - Biotech Department
       - HOD of Biotech Department
       - HOD of Biotechnology Department
+      - Name the HOD of Biotech Department
+      - Name the HOD of Biotech branch
 
  - intent: placement
    examples: |
@@ -302,6 +310,9 @@ nlu:
      - What was the highest CTC offered during MNNIT Allahabad Placements 2021? 
      - What are placement statistics of MNNIT Allahabad? 
      - How is placement in MNNIT?
+     - How is placement?
+     - What is highest package? 
+     - placement
    
 
  - intent: askplaces
@@ -318,3 +329,166 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human? 
+
+ - intent: healthquery
+   examples: |
+    - healthquery
+    - healthupdate
+    - healthissue
+    - I want to give feedback of my health
+    - health
+    - h
+
+ - intent: inform
+   examples: |
+    - a full [8 hours](sleep)
+    - only [four hours](sleep)
+    - about [six hours](sleep)
+    - [5 hours](sleep)
+    - [low](stress)
+    - [medium](stress)
+    - [high](stress) stress right now
+    - Yes, I went for a [run](exercise)
+    - uh huh an hour of [yoga](exercise)
+    - yep, I went for a [hike](exercise)
+    - Yes I took the dog for a [walk](exercise)
+    - Yeah, I played [tennis](exercise)
+    - I went [swimming](exercise)
+    - I went for [walk](exercise)
+    - I did [swimming](exercise)
+    - I went for [cycling](exercise)
+    - Took a [spin class](exercise)
+    - Did some [boxing](exercise)
+    - [rock climbing](exercise)
+    - played some [basketball](exercise)
+    - played [football](exercise)
+    - I did a [workout](exercise) video
+    - I want to get up early and go for a run
+    - Be more patient with my family
+    - Try to be a better friend
+    - Make sure to eat better tomorrow
+    - eat less junk food
+    - eat better
+    - spend less time on my phone
+    - don't procrastinate
+    - Go to bed earlier
+    - Don't stay up so late
+    - try to make some time to meditate
+    - i ate pretty healthy overall
+    - lots of fruits and vegetables
+    - I ate a salad
+    - too many snacks
+    - too many sweets
+    - too much junk food
+    - a lot of carbs
+    - too much fatty food
+    - Get more exercise
+
+ - intent: outofscope
+   examples: |
+    - that's not what I want to do
+    - wait stop
+    - you're no help
+    - this is no help at all
+    - how old are you
+    - I want to order a pizza
+    - tell me the weather
+    - this isn't working
+    - I already told you that
+    - don't like that
+    - I don't want to tell you that
+    - none of your business
+    - that's not right
+    - stop asking
+    - nevermind
+    - I want to do something else
+    - I changed my mind
+
+ - intent: Avishkar
+   examples: |
+    - What is Avishkar?
+    - Tell me somethong about Avishkar
+    - What is technical fest?
+    - Avishkar
+    - What is Avishkar event?
+    - Which is the famous fest ?
+    
+ - intent: eventcc
+   examples: |
+    - What are the event present in avishkar?
+    - Events of cc club in which we can participate
+    - Name the events of avishkar
+    - What are various events present in Avishkar?
+    - What are the function in Avishkar?
+    - What are the occasion organized in Avishkar?
+    - events of Avishkar
+    - Tell me some events name of avishkar
+    
+ - intent: eventrobomania
+   examples: |
+    - What is Robomonia?
+    - What are events in robotics club during Avishkar
+    - events of Robomania
+    - What are events organised by Robotics Club MNNIT?
+    - Robitics event in Avishkar
+    - Tell me something about Robomonia 
+    - Name the events of Robomonia
+    - Tell me about events of Robomania
+    - Name the events of Avishkar of Robotics club
+    - Robitics event in Avishkar MNNIT
+  
+ - intent: achievR
+   examples: |
+    - What are the achievement of Robotics club
+    - achievement of robotics club MNNIT
+    - Tell me something about achievement of robotics club
+    - Name the achievement of robotics
+    - achievement of robotics
+    - winning of robotics club 
+    - What are the winning of robotics club MNNIT
+    
+ - intent: prasang
+   examples: |
+    - What is Prasang?
+    - Tell me something about Prasang.
+    - What is Prasang event?
+    - Where is Prasang organized?
+    - from which club Prasang is organized?
+    - What type of competition is Prasang?
+    - Prasang
+    - Robotics Club event Prasang MNNIT
+    - Prasang is releted to which club?          
+
+ - intent: projects
+   examples: |
+    - What are the current projects of Robotics Club?
+    - What are some featured project of Robotics Club?
+    - Projects of Robotics Club
+    - outstanding projects of Robotics Club
+    - best project of Robotics Club
+    - excellent project of Robotics Club MNNIT
+    - Robotics Club Project MNNIT
+    - Name some projects of Robotics Club 
+    - Tell me something about projects of Robotics Club 
+
+ - intent: athhead
+   examples: |
+    - Who is head of athletics club
+    - Who is the coordinator of athletics club
+    - head of athletics club
+    - Coordinator of athletics club
+    - Under which professor , athletics club events are organised?
+    - head of athletics sports
+    - managing head of athletics club
+    
+ - intent: achievAth
+   examples: |
+    - What are the achievement of athletics club
+    - achievement of athletics club MNNIT
+    - Tell me something about achievement of athletics club
+    - Name the achievement of athletics
+    - achievement of athletics
+    - winning of athletics club 
+    - What are the winning of athletics club MNNIT 
+
+ 
