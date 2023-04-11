@@ -1,0 +1,389 @@
+version: "2.0"
+
+intents:
+  - greet
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - MNNIT_Robotics
+  - tell_name
+  - Cordinators_Robotics
+  - out_of_scope
+  - Event
+  - committee
+  - my_name:
+      use_entities: 
+        - name
+  - mobile_number:
+      use_entities:
+        - number
+  - Director
+  - Gym
+  - basketball
+  - Play_Grounds
+  - Canteen
+  - Department
+  - MNNIT_Game
+  - Biotechnology_Department
+  - play_video
+  - chitchat
+  - Image of MNNIT
+  - goodbye
+  - search_provider
+  - nlu_fallback
+  - register
+  - thanks
+  - let_check
+  - request_restaurant
+  - inform
+  - Yoga_Club
+  - Chess_club
+  - Cricket_Club
+  - E_cell
+  - MHM
+  - Anokhi_Pahel
+  - volleyball
+  - Rotaract_club
+  - Football
+  - Machanical_department
+  - Multi_Purpose_hall
+  - Green_Club
+
+
+entities:
+  - name
+  - facility_type
+  - cuisine
+  - number
+
+slots:
+  name:
+    type: text
+    influence_conversation: false
+  number:
+    type: text
+    influence_conversation: false
+  location:
+    type: text
+    influence_conversation: false
+  Biotech:
+    type: text
+    influence_conversation: false
+
+  registeremail:
+    type: text
+    influence_conversation: false
+  facility_type:
+    type: text
+    influence_conversation: false
+
+  cuisine:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+  num_people:
+    type: float
+    auto_fill: false
+    influence_conversation: false
+  outdoor_seating:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+
+
+
+responses:
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_chitchat/ask_name:
+  - image: "https://i.imgur.com/zTvA58i.jpeg"
+    text: Hello, my name is Retrieval Bot.
+  - text: I am called Retrieval Bot!
+
+  utter_chitchat/ask_weather:
+  - text: oh, it does look sunny right now in MNNIT.
+    image: "https://i.imgur.com/vnv7aHN.png"
+  - text: I am not sure of the whole week but I can see the sun is out today.
+  
+
+  utter_search_provider:
+  - text: "Yes, There is one clinics that name is Disprancy 
+          that open Daily between the time period is 9 am to
+          6:30 pm. and Daily sechdule of Daily Doctor's Duty is shared on your mail"
+  utter_name:
+  - text: "Hello {name} How are you? "
+    buttons:
+    - title: "I am good"
+      payload: "/mood_great "
+    - title: "I am not good"
+      payload: "/mood_sad"
+  
+  utter_ask_name:
+  - text: "what is your name ?"
+
+  utter_ask_number:
+  - text: "What is your mobile number"
+
+  utter_my_name:
+  - text : "What is your name?"
+  utter_mobile_number:
+  - text : "What is your mobile number?"
+  
+  utter_MNNIT_Robotics:
+  - text : "Yes, One of the best tech Club of MNNIT is Robotics Club."
+
+  utter_department:
+  - text : "Department Name: 
+          1. Biotechnology
+          2. Chemical Engineering
+          3. Computer Science Engineering
+          4. Mechanical engineering
+          5. Civil Engineering
+          6. Production and industrial Engineering"
+
+  utter_food:
+  - text : "There are 5-6 Canteen in the campus in which three canteen present in the boys campus and two canteen open to all"
+  - text : "canteen name is 
+           1. Yamuna cafe
+           2. cafe96  
+           3. Raj canteen
+           4. Tirath canteen  
+           5. Pillai canteen
+           6. Amul canteen"
+
+  utter_MNNIT_Games:
+  - text : "There are many games played in the campus and Difference event organise for games 1. Athletics annual meet, 2. Josh and Jalal"
+    channel: "games"
+ # - text : "Which game would you like to play?"
+
+  utter_ground:
+  - text : "There are two ground present in the campus in which a athelete Ground and other field named Gym khana Ground"
+ 
+  utter_basket:
+  - text : "There are two court in the campus
+           1. New Court
+           2. Old court which is present near multi purpose hole"
+
+  utter_gym:
+  - text : "Yes, Gym also present in the campus separate gym for  both boys and girls"
+
+
+  utter_cordinator:
+  - text : "Cordinator Name: Purushottam Agarwal , Anurag, Mehul, Amit All are Final year Students"
+  
+  utter_director:
+  - text : "Director Name is Dr. R.P Verma"
+
+  utter_Biotechnology_Department:
+  - text : " Biotechnology Department is the renowned Department of college which is present inside the academic building , Dr. Sangeeta Negi Bora is the HOD of Department 
+             she is the professor of the biochemistry and its related topics"
+
+  utter_detail_thanks:
+  - text: "Thanks for providing the given details \nName: {Name},\nMobile Number: {Mobile_number}"
+
+  utter_out_of_scope:
+  - text: "Sorry, I didn't get what you said. Please rephrase what you said."
+
+  utter_let_check:
+  - text: "okay i am shashank"
+
+
+  utter_committee:
+  - text: "There are many committe in the campus. Different commmittee has different role and participate
+     in the cultural fest and other college fest like IITs, other NITs etc.
+      Committe Names are Given Below
+      1. Western Committee
+      2. Core Dramatics
+      3. Quinty
+      4. Darpan
+      5. Media House [MHM]
+      etc."
+
+  utter_ask_registeremail:
+  - text: "Please enter Your email id. We will send you the process there."
+    
+  utter_Event:
+  - text: "There are Many Event is organise in MNNIT and some are most popular fest and I am provide some details 
+     related to fest
+     1. Avishkar
+     2. Culrav
+     3. Hack36
+     4. GAC"
+
+  utter_greet:
+  - text: "Hi there"
+  - text: "Hey! How are you?"
+  - text: "How can I help you?"
+
+  utter_thanks:
+  - text: "welcome"
+ 
+  utter_bye:
+  - text: "bye"
+ 
+  utter_affirm:
+  - text: " Is there anything else I can help you with?" 
+ 
+  utter_deny:
+  - text: "no"
+  
+  utter_iamabot:
+  - text: "I am a Bot and I am happy to help you."
+  - text: "I am a bot, powered by Rasa."
+ 
+  utter_details_thanks:
+  - text: "Thanks for providing the given details \nemailid is : {registeremail}"
+ 
+  utter_default:
+  - text: "ok"
+  
+  utter_defaults:
+  - text: Sorry I didn't get that. Can you rephrase?
+  
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  
+  utter_ask_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  
+  utter_Image of MNNIT:
+  - text: "MNNIT is the most popular calloge. and It has 1st position among of NIT in terms of Placement"
+    image: "http://www.mnnit.ac.in"
+
+  utter_submit:
+  - text: "All done!"
+  
+  utter_slots_values:
+  - text: "I am going to run a restaurant search using the following parameters:\n
+            - cuisine: {cuisine}\n
+            - num_people: {num_people}\n
+            - outdoor_seating: {outdoor_seating}"
+
+  utter_ask_cuisine:
+  - text: "What cuisine?"
+
+  utter_ask_num_people:
+  - text: "How many people?"
+
+  utter_ask_outdoor_seating:
+  - text: "Do you want to sit outside?"
+
+  utter_yoga_club:
+  - text: "EDC Guest House is the place where yoga club present. All the students are practice here.
+         Prof. Divya Kumar is the head of the club and 
+         Sunil Kumar Sharma is the co-ordinator who is studying in the 3rd Year "
+  
+  utter_chess_club:
+  - text: " Chess Club is the official club of the college , various tournament are organized regularly which is both
+        online or offline. Generally lichess is thhe plateform where  chess tournament is organized"
+
+  utter_Cricket_Club:
+  - text: "Cricket Club is the most popular club, club members are practices at the gymkhana ground . Recently 
+        cricket club won the inter NIT trophy"
+
+  utter_E_cell:
+  - text: "Full form of E-cell is the entrepreneurship cell, this club is also the most popular club . Work of this club
+        is to promote the start-ups and unique idea of student and also presenting ideas into reality"
+  
+  utter_MHM:
+  - text: "Full form of MHM is the MNNIT Media House. All the photography , videography compitition are organized and reguraly update of the college"
+
+  utter_Anokhi_Pahel:
+  - text: "Anokhi pahel is the social service where our college students study illiterate child and also pick and Drop child"
+
+  utter_volleyball:
+  - text: "Volleyball is a sport that involves two teams of six players each playing against each other in a enclosed
+   court either indoors or outdoors. 
+   (The exception is beach volleyball which is played on the sand.) Each 
+   player is responsible for holding and striking the ball with their hand or a paddle. A player can only hit the ball with their backhand
+    and can not touch the net. When a player hits the ball, it must bounce at least once on the ground before coming into play. 
+    The object of the game is to score points by hitting the ball over the 
+    cross-point line (either side of the court) into the opponents' side. Practice area of volleyball near Multi Purpose Hall (MP Hall)"
+
+  utter_Green_club:
+  - text: "Maximum tree has been planted, installed dustbin at different places, arranged food and water
+   for birds and animal major in summer"
+    image: "https://instagram.com/mnnit.green_club?igshid=ODM2MWFjZDg="
+  
+  utter_Rotaract_club:
+  - text: "Rotaract club do social work like visiting the orphan , old age house , blind school  to help them"
+    image: "https://www.instagram.com/rotaract_club_mnnit/"
+
+  utter_Football:
+  - text: " Football is  he who at any time got the ball into his hands, run [sic] with it till overtaken by one of the opposite part; and then, if he could shake himself loose from those on the opposite side who seized him, he run on; if not, he threw the ball from him, unless it was wrested from him by the other party, but no person was allowed to kick it"
+  - text: " Students practice football regularly at gymkhana ground "
+
+  utter_Machanical_department:
+  - text: " Mechanical department is situated at north side in academic building. HOD of the Mechanical Department is 
+          Dr. K.N Pandey. All teachers are best this is feedback given by the students"
+
+  utter_Multi_Purpose_hall:
+  - text: "Full form of MP Hall is Multi-Purpose hall, this is the place where many event of colloge organised like GAC
+          Convection, Culrav etc. and Students are played Badminton and Tennis
+           and Dance practice also going on"
+    
+forms:
+  user_details_form:
+    name:
+      - type: from_entity
+        entity: name
+    number:
+      - type: from_entity
+        entity: number
+  register_form:
+    registeremail:
+      - type: from_text
+  restaurant_form: 
+    required_slots:
+      cuisine:
+        - type: from_entity
+          entity: cuisine
+      num_people:
+        - type: from_entity
+          entity: number
+      outdoor_seating:
+        - type: from_intent
+          intent: affirm
+          value: true
+        - type: from_intent
+          intent: deny
+          value: false
+
+actions:
+  - utter_greet
+  - utter_thanks
+  - utter_bye
+  - utter_goodbye
+  - utter_affirm
+  - utter_deny
+  - utter_iamabot
+  - utter_cheer_up
+  - utter_did_that_help
+  - action_submitregister
+  - action_default_fallback
+  - utter_ask_registeremail
+  - utter_name
+  - action_submit
+  - action_video
+  - action_image
+  - action_greet
+  - action_register_form
+  - let_check
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

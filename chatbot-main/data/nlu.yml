@@ -1,0 +1,594 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+
+- intent: search_provider
+  examples: |
+    - I need a [hospital] (facility_type)
+    - find me a nearby [hospital] (facility_type)
+    - show me home health agencies (facility_type)
+    - [hospital] (facility_type)
+    - find me a nearby [hospitals] (facility_type) in [San Francisco] (locations)
+    - I need a [home health agency](facility_type)
+    - there is any hospitals 
+    - clinics
+    - medical shop
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+    - i am going to die
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+# - intent: tell_name
+#   examples: | 
+#     - hello
+#     - what is your name?
+#     - who are you??
+#     - hey
+#     - hi
+#     - who are you??
+#     - please tell me about yourself
+#     - may i know your name
+#     - name
+    
+
+- intent: my_name
+  examples: |
+    - my name is [ashish]{"entity":"name","value":"ashish"}
+    - my name is [rahul]{"entity":"name","value":"rahul"}
+    - my name is [apneet]{"entity":"name","value":"apneet"}
+    - [ashish]{"entity":"name","value":"ashish"} is my name
+    - [rahul]{"entity":"name","value":"rahul"} this side
+    - people call me [ashish]{"entity":"name","value":"ashish"}
+
+- intent: mobile_number
+  examples: |
+    - my number is [9848756789](number)
+    -  [9848756789]{"entity":"number"}
+    -  [9848756789]{"entity":"number"} is my number
+    - my mobile number is  [9848756789]{"entity":"number"}
+    
+- intent: MNNIT_Robotics
+  examples: |
+    - there is any [Robotics club]{"entity":"name"} in the college
+    - best club
+    - tech club
+    - hardware club
+    - Data Science club
+    - Artificial Intelligence club 
+    - machine learning club
+    - there is any club inside the sac building
+    - sac building club
+
+- intent: Department
+  examples: |
+    - department name
+    - how many Deaprtment in the college
+    - How many Accademic department is present in the college
+    - How many Degree courses are available in the mnnit
+    - How many Degree courses are available in the college
+    - How many Degree courses are available in the campus
+    - Degree courses
+
+
+- intent: Canteen
+  examples: |
+    - how many canteen in the campus
+    - canteen 
+    - cafe
+    - food shop
+    - there is any place in the campus where you can buy delicious food
+    - Delicious food center
+    - how many canteen is available in the campus
+    
+# Sport Areas
+- intent: Play_Grounds
+  examples: |
+    - Athelete Ground
+    - Ground
+    - cricket ground
+    - tennis ground
+    - ground
+    - Tennis ground
+    - Practice ground
+    - practice
+    - Exercise ground
+    - exercise
+
+- intent: basketball
+  examples: |
+    - there is any basket ball court in the campus
+    - basket ball court
+    - court
+    - new basketball court
+    - old basketball court
+    - court
+
+
+- intent: Gym
+  examples: |
+    - there is any gym 
+    - gym for boys 
+    - gym for girls
+    - exercise room 
+    - gym
+    - there is any place in the campus where you can do body building exercise
+
+- intent: Cordinators_Robotics
+  examples: |
+    - cordinators of robotics club
+    - cordinator of hardware club
+    - cordinator Name of robotics club
+    - cordinator Name of hardware club
+    - Final Year cordinator Name
+    - Who is the final year cordinator of hardware club
+    - Who is the final year cordinator of robotics club
+
+- intent: Director
+  examples: |
+    - Director of MNNIT
+    - Director
+    - person name who is govern rule in the campus
+    - Director Names
+    - Whos is the Director of MNNIT
+    - Who is the Director of college
+    - Who is the Director of MNNIT Campus
+
+
+- intent: MNNIT_Game
+  examples: |
+    - which games are played under the campus
+    - games
+    - how many games are played
+    - Games Name
+    - sports
+    - sports name
+    - sports meet
+    - athlete
+
+
+- intent: Biotechnology_Department
+  examples: |
+    - Biotechnology Department
+    - Biotech Department
+    - Biotech
+    - Biotech lobby
+    - infront of the Administrative Building
+    - HOD of Biotech Department
+    - HOD of Biotechnology Department
+    
+- intent: play_video
+  examples: |
+    - play the mentioned video
+    - open the url
+    - open the link in browser
+    - show me the video that i asked for
+    - play the video
+
+
+- intent: chitchat/ask_name
+  examples: |
+    - what is your name?
+    - May I know your name?
+    - what do people call you ?
+    - Do you have a name for yourself?
+
+
+- intent: chitchat/ask_weather
+  examples: |
+    - What's the weather like today?
+    - Does it look sunny outside today ?
+    - oh, do you mind checking the weather for me please?
+    - I like sunny days in MNNIT.
+    - I like sunny days in Motilal Nehru National Institute of Technology.
+    - Can we expect any thunderstorms?
+    - Do you have good weather?
+    - How is the weather today?
+    - How is the weather?
+    - How is weather today
+    - Is it hot or cold?
+    - Is it humid out there today?
+    - Is it quite breezy outside?
+    - Is it raining
+    - Is it raining?
+    - Looks like a beautiful day hey?
+    - Nice day out today?
+    - Weather?
+    - What is the temperature today?
+    - What is the weather at your place?
+    - What is the weather for tomorrow?
+    - What is the weather in newyork?
+    - What's it like out there?
+    - What's the weather forecast?
+    - What's the weather like over there?
+    - What's the weather like where I am right now?
+    - What's the weather like?
+    - Will I require my raincoat today?
+    - Will the skies be clear today?
+    - Will we build a snowman today?
+    - how is the weather
+    - how is the weather ?
+    - how is the weather?
+    - how's the weather ?
+    - how's the weather?
+    - how's weather
+    - hows the waether
+    - is it hot ?
+    - is it hot outside ?
+    - is it sunny
+    - is the sun out where you are?
+    - is the sun out where zou are?
+    - it is cold
+    - temperature?
+    - the weather today
+    - weatger
+    - weather
+    - weather?
+    - what is the whether today
+    - what the wheather like?
+    - what"s the weather
+    - what's the weather like where you are?
+    - what's the weather like?
+    - what's the weather today
+    - what's the weather today?
+
+
+- intent: Event
+  examples: |
+    - How many Event is organise in the MNNIT Campus.
+    - Event
+    - which Fest is best of MNNIT.
+    - There is any tech fest 
+    - There is any cultural fest.
+    - Give the name of Popular fest of MNNIT.
+    - Popular Fest
+
+- intent: committee
+  examples: |
+    - How many committes are present in the mnnit.
+    - cultural club 
+    - cultural committee
+    - Dance Committee
+    - Drama Committee
+   
+- intent: Image of MNNIT
+  examples: |
+    - Image of MNNIT
+    - Academic Building of MNNIT Campus
+    - Position
+    - academic building
+    - administration building
+    - NIRF ranking 
+    - Organization
+
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is the use of this?
+    - I don't understand this process
+    - I want to order food
+    - what is 2 + 27
+    - food
+    - punishment
+  
+
+- intent: nlu_fallback
+  examples: |
+    - I can't understand this field
+    - Need explanation for this field
+    - Stop the Creation
+  
+    
+- intent: register
+  examples: |
+    - I want to get register
+    - what is the registeration process
+    - Guide me with the registeration process
+    - How to get register for this ML course
+    - Register me
+    - Registeration process
+    - Please register me for AI program
+    
+- intent: thanks
+  examples: |
+    - thankyou
+    - thanks
+    - thank you
+    - Thanks
+    - Thank You
+    - that's it
+    - no thanks
+    - i am good with it
+    - thanks for your help
+    
+
+# - intent: bot_challenge
+#   examples: |
+#     - are you a bot?
+#     - are you a human?
+#     - am I talking to a bot?
+#     - am I talking to a human?
+
+- intent: let_check
+  examples: |
+    - kam nahi kr rha hai 
+    - its okay
+    - lets check
+ 
+ # clubs
+- intent: Yoga_Club
+  examples: |
+    - yoga
+    - mental exercise
+    - yoga club
+    - where yoga club present
+    - benefits of yoga
+    - coordinators of yoga
+
+- intent: Chess_club
+  examples: |
+    - there is any chess club
+    - chess club
+    - head of chess club
+    - coordinators of chess club
+    - chess tournament are offline 
+    - chess tournament are online
+    - chess tournament
+
+- intent: Cricket_Club
+  examples: |
+    - there is any cricket club
+    - cricket club
+    - most interesting game
+    - most interesting sports
+    - maximum students played game
+    - maximum students played sports
+    - 11 number of people 
+    - cricket
+    - Cricket
+
+- intent: E_cell
+  examples: |
+    - there is any entrepreneurship club
+    - E-Cell
+    - e-cell
+    - e_cell
+    - bussiness club
+    - entrepreneurship club
+    - startups
+    - start-ups
+    - start-up
+
+- intent: MHM
+  examples: |
+    - media house 
+    - Media house
+    - Videography club
+    - Photography club
+    - Graphic design club 
+    - photoes
+
+- intent: Anokhi_Pahel
+  examples: |
+    - Anokhi pahel
+    - social service
+    - poor child study
+    - anokhi pahel
+    - social club
+    - Social Service Club
+
+- intent: volleyball
+  examples: |
+    - volleyball
+    - Volleyball
+    - Volley ball
+    - volley ball
+    - How do you play volleyball
+    - what is the best place to play volley ball
+    - is beach volleyball better than indoor
+    - How to play volleyball for beginners?
+    - how to play volleyball for beginners?
+    - volleyball game
+    - volleyball sports
+    - cannon ball
+    - what is the volley ball club
+    - What is the volleyball club
+
+- intent: Green_Club
+  examples: |
+    - Plantation
+    - clean the campus
+    - protect the bird 
+    - Protect the animals
+    - environment
+    - covering the tree
+    - what is the Green club
+    - what is green club
+    - What is the Green club
+    - what is the work of green club?
+    - what is the work of Green club?
+
+- intent: Rotaract_club
+  examples: |
+    - what is the rotaract club
+    - What is rotaract club
+    - what is the work of rotaract club
+    - rotaract club
+    - rotaract
+    - Rotaract
+    - Do social work 
+    - visiit the local area 
+    - go orphan
+    - spend the time with the people
+
+- intent: Football
+  examples: |
+    - Football
+    - football
+    - Foot ball
+    - Foot Ball
+
+- intent: Machanical_department
+  examples: |
+    - mechanical department
+    - Mechanical Department
+    - Mechanics department
+    - Hod of Mechanical Department
+    - Best Teachers in department
+  
+- intent: Multi_Purpose_hall
+  examples: |
+    - what is the multi-purpose hall
+    - what is the mp hall
+    - What is the MP hall
+    - What is the full form of MP hall
+    - What is the use of MP hall
+    - what is the use  of multi-purpose hall
+    - What is the use of Multi-purpose hall
+    - place where event organised
+    - event organised
+    
+    
+    
+
+
+  
+
+
+
+
+  
+    
+
+    

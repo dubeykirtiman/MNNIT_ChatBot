@@ -1,0 +1,113 @@
+# version: "2.0"
+
+# rules:
+# - rule: Say goodbye anytime the user says goodbye
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - rule: Say 'I am a bot' anytime the user challenges
+#   steps:
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+
+# - rule: Activate form
+#   steps:
+#   # - intent: tell_name
+#   # - action: utter_iamabot
+#   - action: user_details_form
+#   - active_loop: user_details_form
+
+
+# - rule: Submit form
+#   condition:
+#   # Condition that form is active.
+#   #- active_loop: user_details_form
+#   steps:
+# #   # Form is deactivated
+# #   - action: user_details_form
+# #  # - active_loop: null
+# #   #- slot_was_set:
+# #    # - requested_slot: null
+# #   # The actions we want to run when the form is submitted.
+#   - action: action_submit
+
+- rule: submit the video
+  steps:
+  - intent: play_video
+  - action: action_video
+
+# - rule: respond to chitchat
+#  # condition:
+#   # Condition that form is active.
+
+#   steps:
+#   - intent: chitchat
+#   - action: utter_chitchat
+  
+# - rule: out-of-scope
+#   steps:
+#   - intent: out_of_scope
+#   - action: utter_out_of_scope
+
+# - rule: Activate form
+#   steps:
+#   - intent: bye
+#   - action: utter_bye
+
+
+# - rule: register form
+#   steps:
+#   - intent: register
+#   - action: utter_ask_registeremail
+#   - action: register_form
+#   - active_loop: register_form
+  
+# - rule: Submit Project form
+#   condition:
+#   # Condition that form is active.
+#   - active_loop: register_form
+#   steps:
+#   # Form is deactivated
+#   - action: register_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - registeremail: null
+#   The actions we want to run when the form is submitted.
+#  - action: action_submitregister
+
+- rule: activate restaurant form
+  steps:
+  - intent: request_restaurant   # intent that triggers form activation
+  - action: restaurant_form      # run the form
+  - active_loop: restaurant_form # this form is active
+
+- rule: submit form
+  condition:
+  - active_loop: restaurant_form   # this form must be active
+  steps:
+  - action: restaurant_form      # run the form
+  - active_loop: null            # the form is no longer active because it has been filled
+  - action: utter_submit         # action to take after the form is complete
+  - action: utter_slots_values
+
+- rule: Ask the user to rephrase whenver they send a message with low NLU confidence
+  steps: 
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+
+- rule: Implementation of the Two-Stage-Fallback
+  steps:
+  - intent: nlu_fallback
+  - action: action_two_stage_fallback
+  - active_loop: action_two_stage_fallback
+
+- rule: respond to FAQs
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+- rule: Respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
