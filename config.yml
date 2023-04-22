@@ -1,3 +1,91 @@
+# # Configuration for Rasa NLU.
+# # https://rasa.com/docs/rasa/nlu/components/
+# language: en
+
+# pipeline:
+# # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
+# # # If you'd like to customize it, uncomment and adjust the pipeline.
+# # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+#   - name: SpacyNLP
+#     model: 'en_core_web_md'
+#   - name: SpacyTokenizer
+#   # - name: WhitespaceTokenizer
+#   - name: RegexFeaturizer
+#   - name: LexicalSyntacticFeaturizer
+#   - name: CountVectorsFeaturizer
+#   - name: CountVectorsFeaturizer
+#     analyzer: char_wb
+#     min_ngram: 1
+#     max_ngram: 4
+#   - name: DIETClassifier
+#     epochs: 100
+#     constrain_similarities: true
+#   - name: EntitySynonymMapper
+#   - name: ResponseSelector
+#     epochs: 100
+#     constrain_similarities: true
+#   - name: FallbackClassifier
+#     threshold: 0.6
+#     ambiguity_threshold: 0.1
+#   # - name: "DucklingHTTPExtractor"
+#     # url: "http://localhost:8000"
+#     # dimensions: ["number"]
+#   #  - name: WhitespaceTokenizer
+#   #  - name: RegexFeaturizer
+#   #  - name: LexicalSyntacticFeaturizer
+#   #  - name: CountVectorsFeaturizer
+#   #  - name: CountVectorsFeaturizer
+#   #    analyzer: char_wb
+#   #    min_ngram: 1
+#   #    max_ngram: 4
+#   #  - name: DIETClassifier
+#   #    epochs: 100
+# #     constrain_similarities: true
+# #   - name: EntitySynonymMapper
+# #   - name: ResponseSelector
+# #     epochs: 100
+# #     constrain_similarities: true
+
+# # Configuration for Rasa Core.
+# # https://rasa.com/docs/rasa/core/policies/
+# policies:
+# # # No configuration for policies was provided. The following default policies were used to train your model.
+# # # If you'd like to customize them, uncomment and adjust the policies.
+# # # See https://rasa.com/docs/rasa/policies for more information.
+#   - name: MemoizationPolicy
+# #   - name: RulePolicy
+# #   - name: UnexpecTEDIntentPolicy
+# #     max_history: 5
+# #     epochs: 100
+#   - name: TEDPolicy
+#     max_history: 2
+#     epochs: 200
+# #     constrain_similarities: true
+#   #  - name: RulePolicy
+#   #    core_fallback_threshold: 0.7
+#   #    core_fallback_action_name: "action_fallback"
+# #   - name: UnexpecTEDIntentPolicy
+# #     max_history: 5
+# #     epochs: 100
+# #   - name: TEDPolicy
+# #     max_history: 5
+# #     epochs: 100
+# #     constrain_similarities: true
+#   #  - name: MemoizationPolicy
+#  #  - name: RulePolicy
+# #   - name: UnexpecTEDIntentPolicy
+#   #   max_history: 5
+#   #   epochs: 100
+#   #  - name: TEDPolicy
+#   #    max_history: 5
+#   #    epochs: 100
+#   #  - name: MappingPolicy
+#   #  - name: FormPolicy
+# #     constrain_similarities: true
+
+
+
+
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
 language: en
@@ -9,7 +97,7 @@ pipeline:
   - name: SpacyNLP
     model: 'en_core_web_md'
   - name: SpacyTokenizer
-  # - name: RegexEntityExtractor
+  # - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
   - name: CountVectorsFeaturizer
@@ -25,10 +113,10 @@ pipeline:
     epochs: 100
     constrain_similarities: true
   - name: FallbackClassifier
-    threshold: 0.6
+    threshold: 0.7
     ambiguity_threshold: 0.1
   # - name: "DucklingHTTPExtractor"
-    # url: "http://localhost:8000"
+    url: "http://localhost:8000"
     # dimensions: ["number"]
   #  - name: WhitespaceTokenizer
   #  - name: RegexFeaturizer
@@ -38,13 +126,13 @@ pipeline:
   #    analyzer: char_wb
   #    min_ngram: 1
   #    max_ngram: 4
-  - name: DIETClassifier
-    epochs: 100
-    constrain_similarities: true
-  - name: EntitySynonymMapper
-  - name: ResponseSelector
-    epochs: 100
-    constrain_similarities: true
+  #  - name: DIETClassifier
+  #    epochs: 100
+#     constrain_similarities: true
+#   - name: EntitySynonymMapper
+#   - name: ResponseSelector
+#     epochs: 100
+#     constrain_similarities: true
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
@@ -55,7 +143,7 @@ policies:
 #   - name: MemoizationPolicy
    - name: RulePolicy
      core_fallback_threshold: 0.7
-     core_fallback_action_name: "action_fallback"
+     core_fallback_action_name: "action_default_fallback"
 #   - name: UnexpecTEDIntentPolicy
 #     max_history: 5
 #     epochs: 100
@@ -63,14 +151,15 @@ policies:
 #     max_history: 5
 #     epochs: 100
 #     constrain_similarities: true
-  #  - name: MemoizationPolicy
+   - name: MemoizationPolicy
  #  - name: RulePolicy
 #   - name: UnexpecTEDIntentPolicy
   #   max_history: 5
   #   epochs: 100
    - name: TEDPolicy
-     max_history: 5
+     max_history: 1
      epochs: 100
    - name: MappingPolicy
-  #  - name: FormPolicy
+   - name: FormPolicy
 #     constrain_similarities: true
+
