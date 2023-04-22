@@ -1,0 +1,1373 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - common_question
+  - moreaboutcollege
+  - club_club
+  - benfit_club
+  - lit_club
+  - explore_campus
+  - cafetarea
+  - boyshostel
+  - girlshostel 
+  - library
+  - my_name
+  - mobile_number
+  - MNNIT_Robotics
+  - Department
+  - Canteen
+  - MNNIT_Game
+  - Play_Grounds
+  - basketball
+  - Gym
+  - Cordinators_Robotics
+  - Director
+  - Biotechnology_Department
+  - placement
+  - Avishkar
+  - eventcc
+  - athhead
+  - eventrobomania
+  - achievR
+  - prasang
+  - projects
+  - achievAth
+  - tell_name
+  - healthquery
+  - type_intro
+  - outofscope
+  - askplaces
+  - inform
+  - out_of_scope
+  - ask_self_balancing_bot
+  - ask_self_balancing_bot_components
+  - ask_self_balancing_bot_project_video_link
+  - ask_self_balancing_bot_applications
+  - ask_self_balancing_bot_team
+  - ask_music_genre
+  - ask_members_mcg
+  - VideoLink_mcg
+  - RubiksCubeSolverMembers
+  - RubiksCubeSolverProject
+  - RubiksCubeSolverVideoLink
+  - TrafficAnalysisProjectInfo
+  - TrafficAnalysisProjectMembers
+  - TrafficAnalysisProjectLink
+  - VoiceToTranscriptProjectMembers
+  - VoiceToTranscriptProjectLink
+  - VoiceToTranscriptProjectInfo
+  - MusicGenreProjectTimeSchedule
+  - TrafficAnalysisProjectTimeSchedule
+  - RubiksCubeProjectTimeSchedule
+  - SelfBalancingBotProjectTimeSchedule
+  - VoiceToTranscriptProjectTimeSchedule
+  - ask_project_link_ingeneral
+  - get_schedule_trials
+  - membergesture
+  # - linkgesture
+  - chatbotproj
+  - cellphonecontrolled
+  - smartsolarcell
+  - compballfollow
+  - ballfollowingbot
+  - implementballfollow
+  - gesturecontrol
+  - Anokhi_Pahel
+  - Auto_targetting
+  - Rotaract_club
+  - proctoring_system
+  - Wizdroid_members
+  - botrush_stage
+  - E_cell
+  - Yoga_Club
+  - proctoring_system_info
+  - let_check
+  - commitee
+  - time_schedule
+  - search_provider
+  - Event_place
+  - Image of MNNIT
+  - Chess_club
+  - MHM
+  - Wizdroid
+  - Multi_Pirpose_hall
+  - Event
+  - image_to_text
+  - register
+  - Machanical_department
+  - volleyball
+  - chitchat
+  - thanks
+  - cricket_Club
+  - Bot_Rush
+  - Football
+  - play_video
+  # - faq
+  - committee
+  - Cricket_Club
+  - Green_Club
+  - Multi_Purpose_hall
+  - Auto_targeting
+  - bumble_see_info
+  - bumble_see_rule
+  - cellphone_controlled_info
+  - cellphone_controlled_car_rule
+  - whatchatbot
+  - usechatbot
+  - followup
+  - meepmop
+  - inquire_robo_expo_event
+  - inquire_robo_expo_projects
+  - inquire_robo_expo_organizers
+  - ask_decept_of_home
+  - ask_about_decept_of_home_team
+  - ask_about_sbe
+  - sdoh
+  - sdoh2
+  - sdoh3
+  - sdoh4
+  - botrushevents
+  - roboexpoproj
+  - imagebotrush
+  - Bot_rush_schedule
+  # Kirtiman domain
+  - humanoid_info
+  - humanoid_member
+  - humanoid_link
+  - XYPlotter_info
+  - XYPlotter_member
+  - XYPlotter_link
+  - AutoChessBoard_info
+  - AutoChessBoard_member
+  - AutoChessBoard_links
+  - RoomAutomation_info
+  - RoomAutomation_member
+  - RoomAutomation_link
+  - SpiderBot_info
+  - SpiderBot_members
+  - SpiderBot_links
+  - RoboticArm_info
+  - RoboticArm_member
+  - RoboticArm_link
+  - get_schedule:
+      use_entities: team
+  - inquire_event:
+      use_entities: time
+
+entities: 
+  - name
+  # - number
+  # - exercise
+  # - sleep
+  # - stress
+  - team
+  - time
+
+slots:
+  name:
+   type: text
+  # number:
+  #  type: text
+  team :
+   type: text
+  time :
+   type: text
+  # confirm_exercise:
+  #   type: bool
+  #   influence_conversation: false
+  # exercise:
+  #   type: text
+  #   influence_conversation: false
+  # sleep:
+  #   type: text
+  #   influence_conversation: false
+  # diet:
+  #   type: text
+  #   influence_conversation: false
+  # stress:
+  #   type: text
+  #   influence_conversation: false
+  # goal:
+  #   type: text
+  #   influence_conversation: false
+  # video_link:
+  #   type: text
+  #   influence_conversation: false
+  # video_link_opened:
+  #   type: bool
+  #   initial_value: false
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  # - utter_iamabot
+  - utter_anscommon
+  - utter_aboutcollege
+  - utter_clubclub
+  - utter_placement
+  - utter_tellname
+  - utter_my_name
+  - utter_mobile_number
+  - utter_MNNIT_Robotics
+  - utter_department
+  - utter_food
+  - utter_MNNIT_Games
+  - utter_ground
+  - utter_basket
+  - utter_gym
+  - utter_cordinator
+  - utter_director
+  - utter_Biotechnology_Department
+  - utter_avishkar
+  - utter_eventsincc
+  - utter_robomania
+  - utter_achievement
+  - utter_prosang
+  - utter_project
+  - utter_achieveA
+  - utter_tell_intro
+  - action_tell_name
+  - action_tell_number
+  - utter_ask_continue
+  - utter_no_worries
+  - utter_slots_values
+  # - validate_health_form
+  - utter_username
+  - utter_usermail
+  - utter_query
+  - utter_thanks2
+  - action_idk
+  - utter_selfbalacingbot_comp
+  - utter_introselfbalancingbot
+  - utter_link_ssb
+  - action_open_project_link_ssb_github
+  - utter_sbb_link
+  - action_open_ssb_video_link
+  - utter_ssb_application
+  - utter_ssb_members
+  - utter_mgc_info
+  - utter_mcg_members
+  - utter_link_mcg
+  - action_open_mcg_video_link
+  - RubiksCubeSolverProject
+  - utter_rcs_info
+  - utter_rcs_members
+  - utter_link_rcs
+  - action_open_rcs_video_link
+  - action_open_ats_video_link
+  - utter_ats_info
+  - utter_ats_members
+  - utter_ats_link
+  - action_open_vtt_video_link
+  - utter_vtt_info
+  - utter_vtt_members
+  - utter_vtt_link
+  - utter_schedule_sbb
+  - utter_schedule_ats
+  - utter_schedule_mcg
+  - utter_schedule_vtt
+  - utter_schedule_rcs
+  - action_gsheet
+  - action_inquire_event
+  - utter_compballfollow
+  - utter_implementballfollow
+  - utter_ballfollowingbot
+  - utter_gesturecontrol
+  # - utter_linkgesture
+  - utter_smartsolarcell
+  - utter_cellphonecontrolled
+  - action_fallback
+  - action_open_video
+  - utter_goodbye
+  # - utter_affirm
+  # - utter_deny
+  - action_submitregister
+  - action_default_fallback
+  # - utter_ask_registeremail
+  # - utter_name
+  - action_submit
+  - action_video
+  - action_image
+  - action_greet
+  - let_check
+  # not defined
+  - utter_submit
+  - utter_faq
+  - utter_chitchat
+  - utter_Event
+  - utter_commitee
+  - utter_thanks
+  - utter_search_provider
+  # - utter_out_of_scope
+  # - utter_Image of MNNIT
+  - utter_let_check
+  - utter_membergesture
+  - utter_chatbotproj
+  - utter_bye
+  - utter_yoga_club
+  - utter_chess_club
+  - utter_Cricket_Club
+  - utter_E_cell
+  - utter_MHM
+  - utter_Anokhi_Pahel
+  - utter_volleyball
+  - utter_Green_club
+  - utter_Rotaract_club
+  - utter_Machanical_department
+  - utter_Multi_Purpose_hall
+  - utter_bumblesee
+  - utter_bumble_see_rule
+  - utter_cellphone_controlled_info
+  - utter_cellphone_controlled_car_rule
+  - utter_whatchatbot
+  - utter_usechatbot
+  - utter_meepmop
+  - utter_followup
+  - utter_infoaboutrx
+  - utter_projectrx
+  - utter_organizersrx
+  - utter_doh
+  - utter_mnes
+  - utter_sbe
+  - utter_sdoh
+  - utter_sdoh2
+  - utter_sdoh3
+  - utter_start
+  - utter_sdoh4
+  - utter_Bot_Rush
+  - utter_BotRushschedule
+  # we have added
+  - utter_roborxpoproj
+  - utter_botrushevents
+  - utter_imagebotrush
+  # - utter_out_of_scope
+  # - utter_askquery
+  
+responses:
+  utter_gesturecontrol:
+  - text: "The objective of this project is to create a robot that can decrypt the gestures and move as we command through our gestures.This project is based on OpenCV and 
+      hardware and also uses the concept of IoT for transmission of data.In this project, we take gestures from the camera, and the output is then transmitted to the Arduino UNO
+     microcontroller over the wifi using Node MCU.Then as per the instructions of arduino, the bot performs motion.
+     TECH STACK = Python , Arduino Programming , NodeMCU Programming
+     Libraries to be installed/used
+     1.) OpenCV
+     2.) Mediapipe
+     3.) URLlib Request
+     4.) ESP8266 Library (In ArduinoIDE)"
+
+  utter_proctoring_system:
+  - text: "An online proctoring system is an advanced AI integrated tool that has been
+          created for ensuring a cheat-proof test environment when the candidate is attempting
+          an online test from a remote location. It increases the scope for the administrator to conduct 
+          online exams from any remote location without worrying about any sort of misleading act or attempt during the test.
+          and for more information visit https://roboticsclub.mnnit.ac.in "
+    image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.eklavvya.com%2Fblog%2Fsteps-authenticate-candidate-using-remote-proctoring-online-exams%2F&psig=AOvVaw30ph8NMouruEk6-3oMERx8&ust=1681750089410000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCKiJ37vtrv4CFQAAAAAdAAAAABAE"
+
+  utter_proctoring_system_info:
+  - text: "Students Name :
+      1.Tushar Kesarwani
+      2.Sanjay Dutta 
+      3.Peketi Sai Dheeraj 
+      4.Aditya Omar 
+      5.Arpit Mittal"
+
+  utter_image_to_text:
+  - text: " for more information please visit https://roboticsclub.mnnit.ac.in"
+
+  utter_Wizdroid:
+  - text: " AIM:To make a voice control Humanoid
+          Robot.
+      Component used:
+      1.Uno Arduino
+      2.Bluetooth (hc 05)
+      3.Motor Driver
+      4.Wheel  (4. qty)
+      5.Gear Motor (4. qty)
+      6.Batteries (3. qty)
+      7.Leds  (3. qty)
+      8.Jumper Wire
+      9.SunBoard Sheet
+      
+      Description: firstly we design the structure of
+         project and The bot will be four wheeler powered by a
+      motor and batteries. The bluetooth is required for
+      connectivity.Everything will be kept on cardboard
+     sheet. Bot can recognise our voice and can move in left
+     ,right,reverse etc.
+     For more information click the given click given link
+             https://roboticsclub.mnnit.ac.in"
+
+  utter_Wizdroid_members:
+  - text: "Name of all team members:
+      1.  Dhruv chandhok
+      2.  Mohammad kaif
+      3.  Abdul Basit
+      4.  Shiwam Kumar"
+
+  utter_mnes:
+  - text: "The Mid Evaluation will be held from 6PM-10PM on 21st April 2023\n
+           The final Evaluation will be held from 9AM-4PM on 22nd April 2023"
+
+  utter_sbe:
+  - text: "The Mid Evaluation will be held from 6PM-8PM on 21st April 2023\n
+           The Test Run will be held from 9AM-1PM on 22nd April 2023\n
+           The Gameplay explanation will be held from 3PM-3:30PM on 22nd April 2023\n
+           The Final Evaluation will be held from 3:30PM-8PM on 22nd April 2023"
+
+  utter_sdoh:
+  - text: "The Final Evaluation will be held from 6PM-10PM on 23rd April 2023"
+
+  utter_sdoh2:
+  - text: "The exhibition will be held from 3PM-7PM on 23rd April 2023"
+
+  utter_sdoh3:
+  - text: "The Final Evaluation will be held from 2PM-4PM on 23rd April 2023"
+
+  utter_sdoh4:
+  - text: "The Suprise Event  will be held from 5PM-7PM on 23rd April 2023"
+
+  utter_Auto_targeting:
+  - text: "Not Complited yet 
+          For more  information visit https://roboticsclub.mnnit.ac.in"
+  utter_doh:
+  - text: "The remains of a Transformer have been found in the dense overgrowth behind Computer Centre. The remains are being researched at the Interdisciplinary Research Centre. However, the evil Decepticons have received intel about these transformer remains too! They have been incessantly trying to infiltrate the laboratory to disrupt the research and take hold of the remains for themselves. To ward off the troublesome Decepticons, the Lab In-charge wishes to automate the lab security system and give safe environment to the researchers. To this end, an Automatic Door and a Secure Locking System needs to be developed. He also wishes to keep track of the number of personnel inside the premises 24x7. The door should only be accessible once the correct password is entered (since Decepticons will easily fail the CAPTCHA Test).\n The door should open automatically on entering correct password. The people entering and leaving the premises through this door should be tracked at all times and counted. Do you have what it takes to protect our genius researchers from infiltrating Decepticon threat? Show your skills in DECEPT OF HOME and ensure safety of the laboratory and its employees!"
+
+  # utter_Bot_Rush:
+  # - text: "The Decepticons are new to earth and hence they do not remember any paths yet. 
+  #      So  they use a very trivial technique to map the locations that they visit very often. Autobots just got you
+  #      the information on their technique and now need your help in a very special mission. Decepticons draw 
+  #      a maze of a straight black line and at the end of this maze they have all their major weapons facilities
+  #     located,  so if someone keeps following the straight line and solves the maze then they can get to the
+  #    Decepticons' weapons facilities. There is also debris in the path of lines. Your job is to build a 
+  #    bot that can follow a straight line and reach the endpoint without deviating from the line or colliding 
+  #    with any debris on the walls. Occasionally, the bot may need to follow the debris if it obstructs the line. 
+  #    Can you pull off this task?
+
+  #    BOT SPECIFICATION:-
+  #     The bot must contain sufficient sensors to detect black lines and follow the wall.
+  #     The bot must fit into a box of dimensions 25 cm x20 cm x20 cm.
+  #     You are allowed to use readymade sensors. 
+  #     You can’t supply more than 120W power to your robot.
+  #     Each team is allowed to have only one autonomous bot.
+  #     The bot should not communicate with any other devices.
+  #     Data transfer violations will lead to disqualification.
+  #     During the run, the autonomous bot must not damage the arena. 
+  #     The robots can use on-board or off-board power supplies. 
+
+  #    AREA SPECIFICATION:-
+  #     Black lines of width 3cm on white background. 
+  #     The maze may consist of dead ends. 
+  #     There are two rectangles: 
+  #             The first rectangle marks the start point of stage 1. 
+  #             The second rectangle marks the end of stage 1.
+  #     There will only be left, or right (90-degree) turns. 
+  #         For Stage 1, there may be left, or right turns, dead ends, + crossings, and curved paths in the maze.
+  #         For Stage 2, your bot should follow a wall on its right side (refer sample arena). 
+
+
+  #    GAMEPLAY:-
+
+  #     All the teams have to submit their robot for design testing.
+  #     Your robot has to traverse the whole arena from start to end. 
+  #     There are multiple checkpoints in the whole arena. 
+  #     After clearing any checkpoint, if any timeout is required,
+  #     the robot has to restart the last visited checkpoint. The maximum number of attempts is 3.
+
+  #    EVENT FORMAT:-
+  #    Bot Review & Preliminary Round: 
+  #               Bot Review & Preliminary Round: The event coordinators would review the bots built to
+  #               gauge the progress. The bot should be able to complete the first part of the arena. 
+
+  #    Final Round: -
+  #             Bots selected for the final round should be able to complete the whole arena.
+  #    COMPONENTS: - 
+  #    RULES AND REGULATIONS
+
+  #     team can’t have members from different colleges.
+  #     A team can have a maximum of 4 members and a minimum of 2 members.
+  #     Judges’ decisions will be final and binding to all. 
+  #     You will be provided with 220V 50 HZ AC supply. 
+  #     You are allowed to use up to 12V to run the bot.
+  #     Your Code should not be hard-coded. Organizers reserve the right to change any rules or make new changes. 
+  #     Each team is allowed one trial run in both rounds to calibrate their
+  #     sensors. No team is allowed to make changes in their code during or after the trial run.
+
+  #    Stage 1: 
+  #                 a. Clearing checkpoint 1 += 300 points
+  #                 b. Clearing checkpoint 2 += 500 points 
+  #                 c. Clearing checkpoint 3 += 600 points 
+  #                 d. Time Factor: Max 600 points, allotted relatively to the performance of all the  
+  #                   participants.
+
+  #    Stage 2: 
+  #               a. Same as stage 1.
+  #               b. Reaching the end += 1000 points"
+  utter_Bot_Rush:
+  - text: " BotRush 2k23 is our technical event which is organised , from April 21 - 23, 2023.
+          It involves innovative exhibition manifesting the projects accomplished by BTech second-year
+          students and the most challenging intra-college competitions that include BumbleSee (Line Follower
+          bot competition), Match n Engage (Cell Phone Controlled Bot Competition), Decept of Home
+          (Home Automation Bot Competition) and MeepMop (Open Theme Competition) for BTech first year
+          students that will help inculcate knowledge in the field of robotics and automation by the contribution
+           of Robotics Club with an active participation of over 700 students throughout the college."
+
+  utter_BotRushschedule:
+  - text: " Schedule for 21st April
+            Bumble See -> Mid Evaluation = 6.00 PM MP HALL
+           Match N Engage -> Mid Evaluation = 6.00 PM MP HALL
+
+           Schedule for 22nd April
+           Match N Engage - Final Run - 09:00 AM MP HAll
+           Bumble See - Test run on final arena - 09:00 AM NLHC
+           Bumble See  - Gameplay explanation - 03:00 PM MP HALL
+           Bumble See - Final Run - 03:30 PM MP HALL
+
+           Schedule for 23rd April
+           Decept of Home - Final Evaluation - 09:00 AM MP HALL
+           Meep Mop - Final Evaluation - 02:00 PM MP HALL
+           Robo Expo Exhibition - 03:00 PM MP HALL
+           Surprise Event - 05.00 PM  MP HALL
+           "
+  utter_Botrush_stage:
+  - text: "Stage 1: 
+              a. Clearing checkpoint 1 += 300 points
+              b. Clearing checkpoint 2 += 500 points 
+              c. Clearing checkpoint 3 += 600 points 
+              d. Time Factor: Max 600 points, allotted relatively to the performance of all the  
+                 participants.
+
+       Stage 2: 
+             a. Same as stage 1.
+             b. Reaching the end += 1000 points"
+  
+  utter_time_schedule:
+  - text: "Time of Event is 9:00 am to 6:00 pm "
+
+  utter_Event_place:
+  - text: "MP hall"
+  utter_greet:
+  - text: "Hey! How are you 😜 ?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on! 😊"
+
+  utter_goodbye:
+  - text: "Bye 😊"
+
+  # utter_iamabot:
+  # - text: "I am a bot, powered by Rasa."
+  utter_anscommon:
+  - text: "MNNIT 🏛️ is a technical college whose full form is
+      Motilal Nehru National Institute of Technology which is present in Allahabad , Uttar Pradesh 🎓"
+  utter_aboutcollege:
+  - text: "Motilal Nehru National Institute of Technology Allahabad, Prayagraj (MNNIT)🏛️ is an Institute 
+        with total commitment to quality and excellence in academic pursuits 🎓. It was established as one of the 
+         seventeen Regional Engineering Colleges of India in the year 1960 as a joint enterprise of Government of 
+      India and Government of Uttar Pradesh, and was an associated college of University of Allahabad, which is the 
+      third oldest university in India 👩‍🏫. On June 26, 2002 MNREC was transformed into National Institute of Technology 
+      and Deemed University fully funded by Government of India. "
+  utter_clubclub:
+  - text: "In MNNIT college , some important clubs present are 
+        Literary club
+        GREEN Club
+        Athletics Club (Sports) 🤼
+        Arts society 🖼️
+        Media House of MNNIT ( MHM ) 📱
+        Robotics Club
+        SAE (Society of Automobile Engineers)
+        Gnosis (Quizzing club)
+        E-Cell, MNNIT (Entrepreneurship cell)
+        Rotaract Club
+        Arts society  🖼️"
+
+  utter_benfitclub :
+  - text: "Joining an on-campus club can provide personal, social, and professional benefits.
+           Clubs can help you find community, make friends, network, and have fun.
+          In most cases, you should join 1-2 on-campus clubs and make real commitments.
+          Joining or starting a club can provide you with a sense of community, soft skills, 
+          networking opportunities, and just a good way to spend your free time. You can discover 
+          the benefits of joining clubs in college and the different types of clubs you can participate in."
+
+  utter_litclub :
+  - text: "The Literary Club of MNNIT works to allow you to freely express your ideas through various literary 
+          forms to enhance your creative faculties, which are responsible for developing skills that will keep you 
+           ahead in life and dispel the most common apprehension of the general public."
+
+
+  utter_explorecampus:
+  - text: "Campus Area is not so big but not small also, contains all the requisite facilities.
+        The campus area is 222 acres. Seniors are very supportive towards their juniors.The campus is clean and neat. 
+        The atmosphere is great to make the students concentrate in study. 
+        It is one of the highly recommended college in India for engineering studies.
+        The medical facilities provided by the college is great and the library is amazing. .
+        College fest are good.
+        You can go to this link for getting images of campus life - https://www.facebook.com/MNNITALLD/photos/ "
+  
+  utter_restaurent:
+  - text: " The institute offers exceptional very good eating canteen 🏨 outlets which are hygienic and reasonable in nature
+           and managed by recognised quality outlets such as Amul India Private Limited and Bikanervala food Private Limited 🏨.                
+           You can go to this link for their location and ordering
+           - https://www.justdial.com/Allahabad/Restaurants-in-Cavalry-Lines/nct-10408936"
+
+  utter_boyshostel:
+  - text: "There are seven Boys hostels 🏠 at present in the Institute. The capacity of boys hostel is 1800 (1044 single seated rooms 
+          and 252 triple seated rooms ). Room allotment is done in such a way that students from different parts of country freely intermingle
+          with each other depicting national integration. Geysers and Water coolers with aquaguard on every floor. PCO for STD/Local calls. 
+          Books and Stationary shop. 24 hours internet connectivity with 100 Mbps LAN. Guest room. Generator, which in case of power failure provides
+          electricity to the hostels. All night canteen. Magazine and Newspapers are provided. This is run by students boys hostel. 
+          Mess workers are under their control."
+
+  utter_girlshostel:
+  - text: "There two Girls hostels 🏠 at present in the Institute. The capacity of girls hostel is 145. Room allotment is done in such a way that
+          students from different parts of country freely intermingle with each other depicting national integration. Washing machine. PCO inside the
+           hostel. Generator, which in case of power failures provides electricity to the mess and the common room. Provisional goods store in the
+          hostel premises. 24 hours internet connectivity with 100 Mbps LAN. Water cooler and Geysers are also present. Magazine and 
+          Newspapers are provided. Two motor pumps installed. Air cooler and Refrigerator. This is run by students in girls hostel. "
+  
+  utter_library :
+  - text: "Yes , there is a central library📚  present in MNNIT Allahabad which has both - a huge repository of books 🗞️ for references and knowledge assimilation as well 
+           as ebooks for or online learning. The library houses more than 1.2 lakh books, 14526 e-journals, and 29508 conference papers with stacks of accessories and reading materials. 
+   
+              "
+  utter_tellname :
+  - text: "What is your name ?"
+  
+  utter_tell_intro:
+  - text: "I am a chatbot 🤖, Type 'Intro' for registering and type 'healthquery' for giving your healthfeedback  , Type '/stop' for ending the conversation , You can also ask general information about MNNIT coolege"
+
+  utter_my_name:
+  - text : " Hi {name}! , what is your mobile number 📱 ? "
+  utter_mobile_number:
+  - text : "Yeah , Your mobile number is {number}"
+ 
+  utter_MNNIT_Robotics:
+  - text : "In this ever-developing era of technology, the concept of self-driving cars has never been more significant. With major breakthrough happening in the field of vehicle autonomy,Artificial intelligence, machine learning and robotics. Robotics Club Of MNNIT has set the bar higher by putting together great projects and\n
+            getting remarkable achievements in various tech fests headed by Purushotam Kumar, Anurag and Mehul . it is currently one of the best tech Club of MNNIT  🤖 The  Robotics Club. 🦾"
+  
+  utter_athhead:
+  - text : ""
+
+  utter_department:
+  - text : "Department Name: 
+          1. Biotechnology
+          2. Chemical Engineering
+          3. Computer Science Engineering
+          4. Mechanical engineering
+          5. Civil Engineering
+          6. Production and industrial Engineering"
+
+  utter_food:
+  - text : "There are 5-6 Canteen in the campus in which three canteen present in the boys campus and two canteen open to all"
+  - text : "canteen name is 
+           1. Yamuna cafe
+           2. cafe96 🍟
+           3. Raj canteen
+           4. Tirath canteen 🍉
+           5. Pillai canteen 🍕
+           6. Amul canteen 🍿"
+
+  utter_MNNIT_Games:
+  - text : "There are many games played in the campus and Difference event organise for games 1. Athletics annual meet, 2. Josh and Jalal"
+  utter_ground:
+  - text : "There are two ground 🎍 present in the campus in which a athelete Ground and other field named Gym khana Ground"
+  utter_basket:
+  - text : "There are two court in the campus
+           1. New Court ⛹️‍♂️
+           2. Old court which is present near multi purpose hole"
+
+  utter_gym:
+  - text : "Yes, Gym also present in the campus separate gym for  both boys 🏋️ and girls 🏋️‍♀️"
+
+
+  utter_cordinator:
+    - text : "Cordinator Name: Purushottam Agarwal , Anurag, Mehul, Amit All are Final year Students"
+  utter_director:
+    - text : "Director Name is Dr. R.P Verma"
+
+  utter_Biotechnology_Department:
+    - text : " Biotechnology Department is the renowned Department of college which is present inside the academic building , Dr. Sangeeta Negi Bora 
+        is the HOD of Department. She is the professor of the biochemistry and its related topics"
+
+  utter_placement:
+    - text : "Well, MNNIT has a good placement statistics 🤑. Considering the CSE or IT branch, you need to have an average level
+              of coding and interest in your subjects and you are sure to receive a nice placement package 💸. Many reputed companies 
+              such as Goldman Sachs, visa etc visit the college. Students from core branches are placed in government as well as 
+              private companies. Many companies like IOCL etc give students a chance to prove their potential and get in to it "
+
+  utter_avishkar:
+    - text : "Avishkar is MNNIT's annual techno-management festival and is held either in September or October.Equipped with many technical and managerial events, Avishkar is 
+              an excellent platform for students to hone their skills, create outstanding projects, expand their networks, and build a superb CV."
+
+  utter_eventsincc:
+    - text : " Several events in the domain of Computer Science And Engineering are
+              SoftaBlitz
+              DroidRush
+              Webster
+              Logical Rhythm
+              TuxWars and Revengg
+              Operaomnia
+              TechMaiden
+              Code Warrior
+              Insomnia, Code of the Day, Mathrush"
+  
+  utter_robomania:
+    - text : "As a technical club, Robotics Club MNNIT organizes three challenging competitions during Avishkar under the name Robomania
+                 Autonomous Robotics Competition (Exclusively for 1st years)
+                Autonomous Robotics Competition (Open to All Years)
+                Autonomous-cum-Manual Robotics Competition (Open to All Years)"
+
+  utter_achievement:
+    - text : "- IIT BHU (Technex) Year 2019-2020
+               Maze Explorer - Third Position
+              Team Members - Purushotam Kumar Agrawal , Mehul Singhal , Pravesh Pandey
+          
+              Year 2020-2021
+              e-Yantra (Yearlong Robotics Competition By IIT Bombay & MHRD)
+              Successfully Completed Till Task 6, Under Top 10 Teams Out of 365 (Theme - Vitaran drone)
+              Team Members - Purushotam Kumar Agrawal , Mehul Singhal , Anurag Gupta , Abhishek Pathak"
+
+  utter_prosang: 
+    - text : "Prodyogiki Sangam, better known as ProSang, is the annual Techfest of Robotics and Aeroclub of MNNIT.
+                 It is an initiative to fulfill the basic need to help students score the gap between industrial skill set requirements and academics, 
+                hence motivating them to model solutions to real-world problems."
+
+  utter_project:
+    - text :  "Some featured projects are:
+                  Person Follower Robot
+                  WanderBot
+                  E-Yantra Vitaran Drone
+                  Indoor Navigation Robot
+                  CNC X-Y Plotter
+                  Self Driving Car
+                  Biometric Attendance System Using the Fingerprint Sensor
+                  Sudoku Solver Robotics Project"
+  utter_achieveA:
+    - text : " Athletics Team Spardha 2k22 (IIT BHU)
+           GOLD 
+        1. Kajal Shahi (1500 m)
+        2. Ayushi Shukla (Javelin Throw)
+        3. Kajal Shahi (800 m)
+        4. Kajal Shahi (400 m)
+         SILVER
+        1. Harsh Gupta (400 m H)
+        2. Shubham Kumar Singh (110M Hurdles)
+        3. Shubham Bharoja (High Jump)
+        4. 400 m relay women
+        Kajal Shahi
+        Sweety Swami
+        Anushka Singh
+        Taniya Agarwal
+       BRONZE
+       1. Anand Kumar Yadav (1500 m)
+       2. Anand Kumar Yadav (800 m)
+       3. Anand Kumar Yadav (5000 m)
+       4. Taniya Agarwal (400 m)
+       5. Sweety Swami (High Jump)
+       6. Omkar Singh (High Jump)
+       7. 100 m relay women
+            Kajal Agarwal
+            Sneha Shakya
+            Taniya Agarwal
+            Anushka Singh
+        4th POSITION
+       1. Ayushi Singh (Discus Throw)
+       2. Anushka Singh (100 m) 
+       3. Anushka Singh (200 m)
+       4. Gugulath SHARATH (110M Hurdles)
+       5. 100 m Relay 
+       Harsh Gupta
+       Mauhammad 
+       Jagdeesh Guru 
+       Kallepally Sai Teja
+       Overall Athletics Runner-Up - MNNIT ALLAHABAD
+       Overall Athletics Women's Runner-Up - MNNIT ALLAHABAD
+        Best athlete women - Kajal Shahi🏆🏆❤ "
+  
+  
+  utter_eventorganize:
+    - text : "The head of athletics club is Prof. Verma sir."
+  utter_ask_confirm_exercise:
+    - text: Ok let's start , Be ready for giving feedback about yor health.
+            Did you exercise yesterday? Don't sweat it if you didn't run a marathon - walks count!
+  utter_ask_exercise:
+    - text: What kind of exercise did you do 💪 🏊 ?
+  utter_ask_sleep:
+    - text: "How much sleep did you get 💤  last night?"
+  utter_ask_diet:
+    - text: "Did you stick to a healthy diet 🥦  yesterday? "
+  utter_ask_stress:
+    - text: "Is your stress level low, medium or high 🧘🏼 ?"
+      
+  utter_ask_goal:
+  - text: "Setting goals - even small ones - is a great way to focus your day. What do you want to accomplish today 🥇 ?"
+  utter_slots_values:
+  - text: "You've submitted the following answers:\n
+            - Exercised?: {confirm_exercise}\n
+            - Type of exercise: {exercise}\n
+            - Sleep: {sleep}\n
+            - Stuck to a healthy diet?: {diet}\n
+            - Stress level: {stress}\n
+            - Goal: {goal}"
+  utter_no_worries:
+  - text: "No problem :)"
+  utter_ask_continue:
+  - text: "Sorry, I don't quite understand. Do you want to continue?"
+  utter_username:
+  - text : "What is your username?"
+  utter_usermail:
+  - text : "What is your usermail?"
+  utter_query:
+  - text : "What is the query?"
+  utter_thanks2:
+  - text : "Thanks for providing the values"
+  utter_introselfbalancingbot:
+  - text : "The aim of this project is to make an automated vehicle that balances itself without any outside help or support.This project is a rather complex one as it involves using PID Control and involuted programming. Self-balancing robots are unique among all others, just because of their ability to balance on a given fixed position. Even if the robot is displaced from its position, it is programmed so that it again recovers its position.
+            \nTechnology used:\n
+            On Robot: Bluetooth, PID, TIMER Interrupt, Kalman Filter, Communication protocol (serial and I2C).\n
+            Features:\n
+            1.The robot balances on two wheels.\n
+            2.We can move the robot left, right, forward, and backward.\n
+            3.Option to set the PID constants from the onboard knob as well as wirelessly from the Android application.\n
+            4.The robot stands on its own with a servo motor for calibration when powered on.\n
+            5.We can reset the robot wirelessly in case it falls on the ground.\n
+            6.Used PORT control of Arduino for making the pin high and low as it is 60 times faster than the digitalWrite function of Arduino."
+  
+  utter_selfbalacingbot_comp:
+  - text : "MPU6050- MPU6050 is a three-axis accelerometer and three-axis gyroscope Micro Electro-mechanical system (MEMS). It aids in the measurement of velocity, orientation, acceleration, displacement, and other motion-related features.\n
+            Arduino Uno- Arduino UNO is a low-cost, flexible, and easy-to-use programmable open-source microcontroller board that can be integrated into a variety of electronic projects. This board can be interfaced with other Arduino boards, Arduino shields, and Raspberry Pi boards and can control relays, LEDs, servos, and motors as an output.\n
+            Drv8825 Motor driver- The Drv8825 is a complete micro-stepping motor driver with a built-in translator for easy operation. It is designed to operate bipolar stepper motors in full-, half-, quarter-, eighth-, and sixteenth-step modes, with an output drive capacity of up to 45 V and ±2.2 A.\n
+            Stepper Motor- Stepper motors are a type of DC synchronous motor. Whereas the rotation of an induction motor is largely uncontrollable, the rotation of a stepper motor can be controlled with a remarkable degree of precision. Stepper motors can produce full, instantaneous torque - even from a standstill.\n
+            Li-polymer battery- A lithium-polymer battery (LiPo) is a rechargeable battery that, in the case of true LiPo, uses solid polymer for the electrolyte and lithium for one of the electrodes. Commercially available LiPo is a hybrid- gel polymer or liquid electrolyte in a pouch format, more accurately termed a lithium-ion polymer battery.\n
+            Jumper wires- Jumper wires typically come in three versions- male-to-male, male-to-female and female-to-female. The difference between each is in the endpoint of the wire. Male ends have a pin protruding and can plug into things, while female ends do not and are used to plug things into.\n
+            \nRole of each software component-\n
+            MPU6050 Data: Initially MPU-6050 will measure the angle difference between the current position of the bot and its normal position. Now, this data is transferred to PID.\n
+            PID Tuning: PID will take input from MPU-6050 and accordingly calculate the PID value and give variable signals to both motors using interrupt service routine to bring the bot to its normal position and balance it.\n
+            Bluetooth Communication: Once the bot is balanced then we will send different commands ( forward, backward, turn left, turn right, and stop ) to the bot using Bluetooth communication to move the bot in different directions.\n
+            ISR Command: After receiving a command from Bluetooth, ISR will give different impulses to motors to move the bot according to the given command."
+  utter_link_ssb:
+  - text: "Opening  the project video link "
+  utter_sbb_link:
+  - text: "1.The robot balances on two wheels.\n
+           2.We can move the robot left, right, forward, and backward.\n
+           3.Option to set the PID constants from the onboard knob as well as wirelessly from the Android application.\n
+           4.The robot stands on its own with a servo motor for calibration when powered on.\n
+           5.We can reset the robot wirelessly in case it falls on the ground.\n
+           6.Used PORT control of Arduino for making the pin high and low as it is 60 times faster than the digitalWrite function of Arduino."
+  utter_ssb_application:
+  - text: "1.Self-balancing algorithms can be used in rocket propulsion systems.\n
+           2.Can be used in warehouses for moving goods.\n
+           3.It can be implemented on Segway.\n
+           4.It can be used for surveillance in any terrain."
+  utter_ssb_members:
+  - text: " The team members are:\n
+           1.Sudhanshu Ranjan\n
+           2.Abhishek Kumar Singh\n
+           3.Vikas"
+  utter_mcg_members:
+  - text: " The team members are:\n
+           1.Prakhar Agarwal\n
+           2.Alok Kumar Singh\n
+           3.Shreyansh sinha"
+
+  utter_mgc_info:
+  - text: "A music genre classifier is a software program that predicts the genre of a piece of music in audio format. These devices are used for tasks such as automatically tagging music for distributors such as Spotify and Billboard and determining appropriate background music for events.\n\n
+          The ambiguity of genre classification makes machine intelligence well-suited to this task. Given enough audio data, of which large amounts can be easily harvested from freely available music online, machine learning can observe and make predictions using these ill-defined patterns.\n\n
+          The goal of this project is to build a proof-of-concept music genre classifier using a deep learning approach that can correctly predict the genre and confidence level of Western music from popular candidate genres (classical, jazz, rap, rock, etc.. ).\n
+          Approach/Workplan: \n
+          1.Research:\n
+          Audio is a non-semantic symbolic representation and an unstructured binary stream. Because the audio itself lacks the description of content semantics and structured organization, it brings great difficulty to the audio classification work.\n 
+          As audio is still a topic of research therefore the first step will be exploring the dynamics of the problem of the classification of audio files. Preparing a basic roadmap for the Model training/ preparation.\n
+          2.	Model Training and Testing:\n
+          The heart of the project is preparing a Model for the genre classification and it will take the most amount of time. This step will majorly include writing the notebook, preparing a proper pipeline, and evaluating appropriate statistical models and neural networks to train the model. The choice of good open-source datasets for training is also crucial. Testing the model and evaluating it against established metrics.\n
+          3.Deployment:\n
+          It is the most critical step that must be completed for a model to serve its intended purpose and solve the challenges it is designed for. \n
+          We intend to deploy it as a free web application using web frameworks like Django and Flask."
+
+  utter_link_mcg:
+  - text: "Opening  the project video link "
+
+  utter_rcs_info:
+  - text: "Rubik_cube_solver-2022-23-Project"
+  utter_rcs_members:
+  - text: "1.Ayush Srivastav\n
+           2.Pavan Kumar\n
+           3.Vinay Singh\n
+           4.Aniket Mohanty\n
+           5.Pandula suchir"
+
+  utter_link_rcs:
+  - text: "Opening  the project video link "
+
+  utter_ats_info:
+  - text: "The project aims to build an autonomous system which collects the traffic data and provides us traffic volume studies and spot speed analysis \n
+           FEATURES:\n
+           Takes the real time vehicle data from the camera and converts the data into the interactive charts and calculates required parameters like percentile speed and other important parameters.\n
+           COMPONENTS:\n
+           Camera module to collect the traffic data."
+  utter_ats_members:
+  - text: "1.Aayush Verma\n
+           2.Priyansh Lohia\n
+           3.Rishi Mishra\n
+           4.Priyanshu Maurya"
+
+  utter_ats_link:
+  - text: "Opening  the project video link "
+
+  utter_vtt_info:
+  - text: "An audio transcription app based on machine learning automatically converts spoken words from an audio recording into written text using machine learning algorithms trained on large datasets  of speech data .These apps can handle different accents and speaking styles,save time and effort,and provide a high level of accuracy and flexibility.\n
+           This project aims to build an app that transcribes audio files of various tones and styles into text using a deep learning approach that can correctly predict the user's description of the message in the expected emotion and tone modulation.\n
+           Tech stack -\n
+           1.Tensorflow - It is one of the most famous libraries for working with Machine Learning and Artificial Intelligence.\n
+           2.Keras - One of the best libraries that provides a python interface for working with artificial neural networks\n
+           3.Audio Analysis Library Librosa - is a python package for music and audio analysis. It provides the building blocks necessary to create music information retrieval systems.\n
+           4.Python Web Framework FLASK - Flask is used for developing web applications using Python, implemented on Werkzeug and Jinja2. Advantages of using Flask framework are: A built-in development server and a fast debugger are provided.\n
+           5.Kaggle - as virtual machine \n
+           6.HTML,CSS,Javascript - For designing the web application, that includes both frontend and backend\n
+           7.Python- Python becomes the most important multipurpose  programming language for AI/ML data manipulation and implementation.\n
+           8.Pandas, Numpy, Matplotlib -  These data analysis and visualization libraries build the base of exploratory data analysis, like transforming the training testing and validation sets.\n
+           Real-life applications -\n
+           1.Medicine: Doctors and nurses have to keep a large number of detailed records of interactions with patients, treatment plans, prescriptions, and more. With dictation services, they can verbally detail this information and have it automatically transcribed for greater efficiency.\n
+           2.Social Media: If you’ve looked at Instagram or YouTube lately, you may have noticed some videos have captioning services. This is a new feature that autocaptions people as they speak using AI. While it may not always be fully accurate, it’s helping to provide greater accessibility and usability for users.\n
+           3.Technology: Smartphones have had the talk-to-text feature in place for some time. As the name suggests, it lets you text someone through audio dictation rather than typing out the message.\n
+           4.Law: In law, accurate documentation of court proceedings is fundamental to a case because accuracy can affect the outcome of that case. It’s also important for historical documentation to learn from or reference for future cases.\n
+           5.Police Work: Audio transcription has numerous applications in police work, with likely more to come. It can be used for transcribing investigative interviews, evidence records, calls to the emergency line, body camera recorded interactions, and more. Much like with the law, the accuracy of these transcriptions can have a significant impact on court cases and people’s lives."
+  utter_vtt_members:
+  - text: "1.VAISHNAV ANISH\n
+           2.Divyanshi Singh\n
+           3.V Suhas\n
+           4.Kunwar Aridaman Singh\n
+           5.Amisha Singh"
+
+  utter_vtt_link:
+  - text: "Opening  the project video link "
+
+  utter_schedule_mcg:
+  - text: "no schedule set yet"
+
+  utter_schedule_ats:
+  - text: "no schedule set yet"
+
+  utter_schedule_vtt:
+  - text: "no schedule set yet"
+
+  utter_schedule_rcs:
+  - text: "no schedule set yet"
+
+  utter_schedule_sbb:
+  - text: "no schedule set yet"
+
+  utter_submit:
+  - text: "submiting form"
+
+  utter_faq:
+  - text: "using faq"
+
+  utter_chitchat:
+  - text: "starting chitchat"
+
+  utter_Event:
+  - text: "There are Many Event is organise in MNNIT and some are most popular fest and I am provide some details 
+     related to fest
+     1. Avishkar
+     2. Culrav
+     3. Hack36
+     4. GAC"
+
+  utter_commitee:
+  - text: "There are many committe in the campus. Different commmittee has different role and participate
+     in the cultural fest and other college fest like IITs, other NITs etc.
+      Committe Names are Given Below
+      1. Western Committee
+      2. Core Dramatics
+      3. Quinty
+      4. Darpan
+      5. Media House [MHM]
+      etc."
+  utter_thanks:
+  - text: "Thanks for the info"
+  
+  utter_search_provider:
+  - text: "Yes, There is one clinics that name is Disprancy 
+          that open Daily between the time period is 9 am to
+          6:30 pm. and Daily sechdule of Daily Doctor's Duty is shared on your mail"
+
+  utter_ask_registermail:
+  - text: "no schedule set yet"
+
+  utter_Tmage of MNNIT:
+  - text: "no schedule set yet"
+
+  utter_let_check:
+  - text: "no schedule set yet"
+
+  utter_compballfollow:
+  - text: "1.) Python
+           2.) OpenCV
+           3.) Raspberry Pi [Raspbian OS buster series]
+           4.) Arduino Uno	1	Microcontroller,used to drive the motor driver
+            5.)  Motor Driver	1	use to control the working speed and direction of two motor
+            6.) DC Motor	2	use to rotate wheel
+            7.) Wheel	2	To drive the bot
+            8.) Raspberry Pi	1	use in image processing,wireless connectivity,send the coordinate and distance of object to arduino
+            9.) Camera Module	1	used to detect the ball as an objeft in the video frame
+            10.) BreadBoard	1	use in power distribution ,use to connect multiple pin to a single pin "
+
+  utter_ballfollowingbot:
+  - text: "This is a project based on hardware and OpenCV which is proposed and executed by robotics club of
+      MNNIT to provide hands on experience and exposure to the students in different fields related to robotics."
+
+
+  utter_implementballfollow:
+  - text: "In the code the step of processing is as follows :
+         1.) We first Set the basic set of values for the pi camera such as resolution , framerate and use PiRGBArray to capture it in store in an array .
+          2.) We then ask the user for setting the hsv values for the ball they want the ball to follow.
+         3.) Now the contour is formed from the given hsv values, High definition of the contour assures accurate detection and smooth run of the bot.
+         4.) So for the user input we are creating trackbars with min and max values for the hsv so as to adjust the contour we obtain in the Mask frame.
+         5.) Through this we are applying the fliter over the input for the required input.
+         6.) After applying we are implementing the serial connection between the raspberry pi and arduino uno through the /dev/ttyACM0 port with band rate of 9600.
+         7.) We then run a loop for the frame in the camera.capture_continuous function that takes format of input and the use_video_port if availiable with the captures."
+
+  utter_membergesture:
+  - text: "Project Group Members of gesture controlled project
+     1.) Shubham Verma =	Mechanical Engineering	(20213132)
+     2.) Sumit Mishra =	Mechanical Engineering	(20213065) "
+
+  utter_smartsolarcell:
+  - text: "no schedule set yet"
+
+  utter_cellphonecontrolled:
+  - text: "The project aims to create a remote-controlled car, remote in this case being our mobile phone. To achieve this, we created an app 
+       using MIT app inventor, which sends the phone’s accelerometer data to accelerate the vehicle (Just like it does in most car racing games). 
+       COMPONENTS AND TECHNOLOGIES USED
+         1.) C++
+         2.) NodeMCU
+         3.) App Development "
+
+  utter_chatbotproj:
+  - text: "no schedule set yet"
+
+  utter_bye:
+  - text: "bye , thanks for using "
+
+  utter_yoga_club:
+  - text: "EDC Guest House is the place where yoga club present. All the students are practice here.
+         Prof. Divya Kumar is the head of the club and 
+         Sunil Kumar Sharma is the co-ordinator who is studying in the 3rd Year "
+
+  utter_chess_club:
+  - text: "Chess Club is the official club of the college , various tournament are organized regularly which is both
+        online or offline. Generally lichess is thhe plateform where  chess tournament is organized"
+  
+  utter_Cricket_Club:
+  - text: "Cricket Club is the most popular club, club members are practices at the gymkhana ground . Recently 
+        cricket club won the inter NIT trophy"
+
+  utter_E_cell:
+  - text: "Full form of E-cell is the entrepreneurship cell, this club is also the most popular club . Work of this club
+        is to promote the start-ups and unique idea of student and also presenting ideas into reality"
+
+  utter_MHM:
+  - text: "Full form of MHM is the MNNIT Media House. All the photography , videography compitition are organized and reguraly update of the college"
+
+  utter_Anokhi_Pahel:
+  - text: "Anokhi pahel is the social service where our college students study illiterate child and also pick and Drop child"
+
+  utter_volleyball:
+  - text: "Volleyball is a sport that involves two teams of six players each playing against each other in a enclosed
+         court either indoors or outdoors. 
+         (The exception is beach volleyball which is played on the sand.) Each 
+          player is responsible for holding and striking the ball with their hand or a paddle. A player can only hit the ball with their backhand
+          and can not touch the net. When a player hits the ball, it must bounce at least once on the ground before coming into play. 
+         The object of the game is to score points by hitting the ball over the 
+         cross-point line (either side of the court) into the opponents' side. Practice area of volleyball near Multi Purpose Hall (MP Hall)"
+
+  utter_Green_club:
+  - text: "Maximum tree has been planted, installed dustbin at different places, arranged food and water
+         for birds and animal major in summer"
+    image: "https://instagram.com/mnnit.green_club?igshid=ODM2MWFjZDg="
+  
+
+  utter_Rotaract_club:
+  - text: "Rotaract club do social work like visiting the orphan , old age house , blind school  to help them"
+    image: "https://www.instagram.com/rotaract_club_mnnit/"
+
+  utter_Machanical_department:
+  - text: "Mechanical department is situated at north side in academic building. HOD of the Mechanical Department is 
+          Dr. K.N Pandey. All teachers are best this is feedback given by the students"
+
+  # utter_Multi_Purpose_hall:
+  # - text: "Mechanical department is situated at north side in academic building. HOD of the Mechanical Department is 
+  #         Dr. K.N Pandey. All teachers are best this is feedback given by the students"
+
+  utter_Multi_Purpose_hall:
+  - text: "Full form of MP Hall is Multi-Purpose hall, this is the place where many event of colloge organised like GAC
+          Convection, Culrav etc. and Students are played Badminton and Tennis
+           and Dance practice also going on"
+
+  utter_Football:
+  - text: " Football is  he who at any time got the ball into his hands, run [sic] with it till overtaken by one of the opposite part; and then, if he could shake himself loose from those on the opposite side who seized him, he run on; if not, he threw the ball from him, unless it was wrested from him by the other party, but no person was allowed to kick it"
+  - text: " Students practice football regularly at gymkhana ground "
+
+  utter_bumblesee:
+  - text: "1.Follow the black line path
+           to reach the finish line
+           before anyone else
+           2.The bot must run
+           between a channel of
+           two walls"
+
+  utter_bumble_see_rule:
+  - text: "Yes, there are certain rules that attendees must follow at the Bumble See event. 
+         For instance, all attendees must wear their name badges at all times during the conference. 
+         Additionally, we request that attendees respect the privacy and confidentiality of other attendees, 
+         and not share any information or materials presented at the conference without permission. 
+         If you have any specific questions or concerns regarding the rules, please let us know and we will be happy to 
+         assist you further.\n
+         and for more details https://docs.google.com/document/d/1ho2RqSWpb6-VhR9M0KkvdzEAD71Rv2LFkWEdK9azRPo/edit?usp=sharing"
+
+  utter_cellphone_controlled_info:
+  - text: "The Decepticons have taken Earth hostage, and negotiations between them and Optimus Prime have revealed a high-stakes wager. If a bot made by humans can defeat the Decepticons' bot, they will spare Earth and its inhabitants.
+        Optimus Prime, representing humans, has accepted these terms as the best possible solution. Victory in the race will ensure that the Decepticons end their tyranny and vacate Earth.
+        To achieve this, Optimus Prime requires the best engineers to develop an advanced manual bot that can be controlled using a mobile phone. The bot will compete against Wheelie, the bot developed by the Decepticons for the race. However, before entering the final race against Wheelie, engineers must prove their worth and be the best among their peers. They must navigate an arena or path with enough twists and turns to test the bot's speed, handling, and agility, completing it in the shortest possible time. The bot should not move out of the arena or collide with any obstacles, or points will be deducted.
+        Do you have what it takes to help Optimus Prime and save Earth from the Decepticons? Prove your mettle in Botrush and earn your place in history as the liberator of Earth!
+        "       
+  utter_cellphone_controlled_car_rule:
+  - text: "visit the link for all details https://docs.google.com/document/d/1COADr-NGwhsAxUgNQZIk3wQkQsfl47CBERjD359WJqA/edit"
+  
+  utter_usechatbot:
+  - text: "1.) Greeting: This chatbot is able to greet the user and introduce itself.
+           2.) Conversation: This chatbot is able to engage in a conversation with the user, responding to the user's inputs and maintaining context throughout the conversation.
+           3.) FAQs: This chatbot is able to answer frequently asked questions by the user in a simple and straightforward manner.
+           4.) Natural Language Processing (NLP): This chatbot is able to understand and interpret the user's natural language inputs, even when they are expressed in different ways.
+           5.) Basic functionality: This chatbot is able to perform basic tasks such as setting reminders, providing information on a given topic, and performing simple calculations.
+           6.) Integration with external services: This chatbot is able to integrate with external services, such as weather APIs or news feeds, to provide users with real-time information.
+           7.) Personalization: This chatbot is able to recognize returning users and tailor its responses based on previous conversations.
+           8.) This chatbot is able to extract the information about any event and provide it to the users ."
+  
+  utter_whatchatbot:
+  - text: "A chatbot is a computer program designed to simulate conversation with human users over the internet or through messaging applications. It is also known as a conversational agent
+           or virtual assistant. Chatbots use natural language processing (NLP) and artificial intelligence (AI) to understand the user's intent and provide relevant responses. They can be
+            used for a variety of purposes, such as customer service, information retrieval, and personal assistance. Chatbots can operate through various interfaces, such as messaging apps,
+           websites, and voice assistants. They can be designed to have simple or complex functionalities, depending on the needs of the user and the organization using them."
+
+  utter_meepmop:
+  - text: "The meepmop project instructions are : 
+           The task performed by your bot must be automated, which means that after you start your bot once you cannot make any
+           changes in it and it should complete the specified task on its own
+          ● Your bot must use a minimum of 2 sensors (motor as well),
+                   arduino board and should work on regular power supply
+           ● Prefer creating a moving bot rather than a bot with no wheels "
+ 
+  utter_followup:
+  - text: " The links are:
+           1.) http://www.roboticsclub.mnnit.ac.in/
+           2.) facebook.com/robotics.club.mnnit/
+           3.) instagram.com/roboticsclubmnnit/
+           4.) linkedin.com/in/robotics-club-mnnit/"
+
+  utter_start:
+  - text: " Hello , this is Robotics MNNIT chatbot . You can ask anything related to Botrush event ."
+  
+  utter_infoaboutrx:
+  - text: "Robo Expo is an  robotics event that celebrates the creativity and innovation of college students across MNNIT. This exciting event provides a platform for these young inventors to showcase their latest projects and engage with like-minded individuals who share their passion for robotics.\n
+           As visitors explore the exhibition halls, they encounter a diverse range of projects, from line-following robots to home automation systems. Each project has been carefully designed and built by a team of talented students who have dedicated countless hours to perfecting their creations\n
+           DATE: 21st to 23rd April\n
+           Place: MP HALL"
+
+  utter_projectrx:
+  - text: "Throughout the event, visitors have the opportunity to interact with the robots, learn about the technology behind them, and engage with the student inventors who built them. In addition, there are talks and panel discussions featuring industry experts who share their insights and predictions for the future of robotics.\n
+           There are four major types of projects in the event for 1 st year student along with the wonderful project exhibition of 2nd year students\n
+           The four Types of Projects are :\n
+           1.Bumble See\n
+           2.Match n Engage\n
+           3.Decept Of Home\n
+           4.Meep Mop"
+  
+  # We have added
+  utter_botrushevents:
+  - text: " Botrush events name are :
+            1.) Bumble See
+            2.) Match n Engage
+            3.) Decept of Home
+            4.) Meepmop
+            5.) RoboExpo
+            "
+
+  utter_roborxpoproj:
+  - text: " 1.) SDC - Path Planning
+            2.) Fire Fighting Bot
+            3.) X- Y Plotter Automatic Sorting Machine
+            4.) Humanoid/Biped Robot
+            5.) Mapping and Navigation Robot
+            6.) Self Balancing Bot
+            7.) Gesture Control Bots
+            8.) Target Hitting Bot
+            9.) Room Automation
+            10.) Music Genre Classification
+            11.) SDC - ROS Stack
+            12.) Robotic Arm Rubik’s Cube Solver
+            13.) Spider Bot 
+            14.) Road Lane Detection"
+  
+  utter_imagebotrush:
+  - text: " The images link of botrush is => "
+
+  utter_organizersrx:
+  - text: "The event is hosted by Robotics Club OF MNNIT "
+
+  #Kirtiman domain
+
+  utter_HumanoidRoboInfo:
+  - text:
+        "The project aims to design and build a bipedal robot by synthesizing the gait of a planar biped walking on a level ground. 
+        The components and technologies used are :
+        1.Inverse_kinematics
+        2. arduino
+        3. servo
+        4. biped
+        For more information visit : https://roboticsclub.mnnit.ac.in/projects/overview/57/ "
+
+  utter_HumanoidRoboMember:
+  - text:
+        "The members of the project are : Devendra Saini , Abhinav Singh and Anu Priya (All from second year)."
+
+  utter_HumanoidRoboLink:
+  - text:
+        " WebPage : https://roboticsclub.mnnit.ac.in/projects/overview/57/
+          Youtube : https://youtu.be/dXhq2luH1s8
+        "
+
+
+
+  utter_XYPlotterInfo:
+  - text:
+        "Not yet completed  "  
+
+  utter_XYPlotterMember:
+  - text:
+        "Not yet completed  "
+
+  utter_XYPlotterLink:
+  - text:
+        " WebPage : Not yet completed .
+          Youtube : 
+        "
+
+
+
+  utter_AutoChessBoardInfo:
+  - text:
+        "Not yet completed  "
+
+  utter_AutoChessBoardMember:
+  - text:
+        "Not yet completed "
+
+  utter_AutoChessBoardLink:
+  - text:
+        " WebPage : Not yet completed .
+          Youtube : 
+        "
+
+
+
+  utter_RoboRoomAutomationInfo:
+  - text:
+        "Not yet completed "
+
+  utter_RoboRoomAutomationMember:
+  - text:
+        "Not yet completed "
+
+  utter_RoboRoomAutomationLink:
+  - text:
+        " WebPage : Not yet completed .
+          Youtube : 
+        "
+
+
+
+  utter_SpiderBotInfo:
+  - text:
+        "Not yet completed "
+
+  utter_SpiderBotMember:
+  - text:
+        "Not yet completed "
+
+  utter_SpiderBotLink:
+  - text:
+        " WebPage : Not yet completed .
+          Youtube : 
+        "
+
+
+
+  utter_RoboArmInfo:
+  - text:
+        "Not yet completed  "
+
+  utter_RoboArmMember:
+  - text:
+        "Not yet completed "
+
+  utter_RoboArmLink:
+  - text:
+        " WebPage : Not yet completed .
+          Youtube : 
+        "
+
+# forms:
+#   health_form:
+#     confirm_exercise:
+#     - type: from_intent
+#       intent: inform
+#       value: true
+#     - type: from_intent
+#       intent: affirm
+#       value: true
+#     - type: from_intent
+#       intent: deny
+#       value: false
+#     exercise:
+#     - type: from_entity
+#       entity: exercise
+#     sleep:
+#     - type: from_entity
+#       entity: sleep
+#     - type: from_intent
+#       intent: deny
+#       value: "None"
+#     diet:
+#     - type: from_text
+#       intent: inform
+#     - type: from_text
+#       intent: affirm
+#     - type: from_text
+#       intent: deny
+#     stress:
+#     - type: from_entity
+#       entity: stress
+#     goal:
+#     - type: from_text
+#       intent: inform
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

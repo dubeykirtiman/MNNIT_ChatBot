@@ -1,0 +1,390 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: askingcollege
+  steps:
+  - intent: common_question
+  - action: utter_anscommon
+
+- story: info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell_name
+  - action: utter_tell_intro
+  - intent: type_intro
+  - action: utter_tellname
+  - intent: my_name
+  - action: action_tell_name
+  - intent: mobile_number
+  - action: action_tell_number
+
+- story: inform
+  steps:
+  - intent: tell_name
+  - action: utter_tell_intro
+  - intent: type_intro
+  - action: utter_tellname
+  - intent: my_name
+  - action: action_tell_name
+
+- story: askingcollege1
+  steps:
+  - intent: moreaboutcollege
+  - action: utter_aboutcollege
+
+- story: askingcollege2
+  steps:
+  - intent: club_club
+  - action: utter_clubclub
+
+- story: askingcollege3
+  steps:
+  - intent: benfit_club
+  - action: utter_benfitclub
+  - intent: lit_club
+  - action: utter_litclub
+
+- story: campuslife
+  steps:
+  - intent: explore_campus
+  - action: utter_explorecampus
+
+- story: hostel
+  steps:
+  - intent: cafetarea
+  - action: utter_restaurent
+  - intent: boyshostel
+  - action: utter_boyshostel
+  - intent: girlshostel 
+  - action: utter_girlshostel
+  - intent: library
+  - action: utter_library
+
+- story: robotics
+  steps:
+  - intent: MNNIT_Robotics
+  - action: utter_MNNIT_Robotics
+
+- story: department
+  steps:
+  - intent: Department
+  - action: utter_department
+
+- story: goodbye
+  steps:
+  - intent: deny
+  - action: utter_goodbye
+
+- story: food stall
+  steps:
+  - intent: Canteen
+  - action: utter_food
+  
+- story: ground
+  steps:
+  - intent: Play_Grounds
+  - action: utter_ground
+
+- story: ball
+  steps:
+  - intent: basketball
+  - action: utter_basket
+  - intent: Gym
+  - action: utter_gym
+
+- story: MNNIT
+  steps:
+  - intent: Cordinators_Robotics
+  - action: utter_cordinator
+
+  - intent: Director
+  - action: utter_director
+
+- story: Game
+  steps:
+  - intent: MNNIT_Game
+  - action: utter_MNNIT_Games
+
+- story: Biotechnology
+  steps:
+  - intent: Biotechnology_Department
+  - action: utter_Biotechnology_Department
+
+- story: placement
+  steps:
+  - intent: placement
+  - action: utter_placement
+
+- story: No Form
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: deny
+  - action: utter_no_worries
+  - action: utter_goodbye
+  - action: action_restart
+
+- story: Path 1 - Retry
+  steps:
+  - intent: healthquery
+  - action: health_form
+  - active_loop: health_form
+  - intent: outofscope
+  - action: utter_ask_continue
+  - intent: affirm
+  - action: health_form
+  - active_loop: null
+  - action: utter_slots_values
+  - action: action_restart
+
+- story: Path 2 - Stop
+  steps:
+  - intent: healthquery
+  - action: health_form
+  - active_loop: health_form
+  - intent: outofscope
+  - action: utter_ask_continue
+  - intent: deny
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: utter_no_worries
+  - action: utter_goodbye
+  - action: action_restart
+
+- story: Avish
+  steps:
+  - intent: Avishkar
+  - action: utter_avishkar
+
+- story: achRobo
+  steps:
+  - intent: achievR
+  - action: utter_achievement
+
+- story: robo
+  steps:
+  - intent: eventrobomania
+  - action: utter_robomania
+
+- story: eventclub
+  steps:
+  - intent: eventcc
+  - action: utter_eventsincc
+
+- story: abtproject
+  steps:
+  - intent: projects
+  - action: utter_project
+
+- story: prasang
+  steps:
+  - intent: prasang
+  - action: utter_prosang
+
+- story: athlethead
+  steps:
+  - intent: athhead
+  - action: utter_athhead
+
+- story: athletics
+  steps:
+  - intent: achievAth
+  - action: utter_achieveA
+
+- story: self_balancing_bot
+  steps:
+  - intent: ask_self_balancing_bot
+  - action: utter_introselfbalancingbot
+  - checkpoint: ask_for_linkcp
+
+- story: self_balancing_bot1.5
+  steps:
+  - checkpoint: ask_for_linkcp
+  - intent: ask_project_link_ingeneral
+  - action: utter_link_ssb
+  - action: action_open_ssb_video_link
+
+- story: self_balancing_bot2
+  steps:
+  - intent: ask_self_balancing_bot_components
+  - action: utter_selfbalacingbot_comp
+
+- story: self_balancing_bot3
+  steps:
+  - intent: ask_self_balancing_bot_project_video_link
+  - action: utter_link_ssb
+  - action: action_open_ssb_video_link
+
+- story: self_balancing_bot4
+  steps:
+  - intent: ask_self_balancing_bot_applications
+  - action: utter_ssb_application
+
+- story: self_balancing_bot5
+  steps:
+  - intent: ask_self_balancing_bot_team
+  - action: utter_ssb_members
+
+- story: mcg_1
+  steps:
+  - intent: ask_music_genre
+  - action: utter_mgc_info
+  - checkpoint: mcc
+- story: self_balancing_bot1.5
+  steps:
+  - checkpoint: mcc
+  - intent: ask_project_link_ingeneral
+  - action: utter_link_mcg
+  - action: action_open_ssb_video_link
+
+- story: mcg_2
+  steps:
+  - intent: ask_members_mcg
+  - action: utter_mcg_members
+
+- story: mcg_3
+  steps:
+  - intent: VideoLink_mcg
+  - action: utter_link_mcg
+  - action: action_open_mcg_video_link
+
+- story: rcs_1
+  steps:
+  - intent: RubiksCubeSolverMembers
+  - action: utter_rcs_members
+  - checkpoint: rcc
+
+- story: rcs1.5
+  steps:
+  - checkpoint: rcc
+  - intent: ask_project_link_ingeneral
+  - action: utter_link_rcs
+  - action: action_open_ssb_video_link
+
+- story: rcs_2
+  steps:
+  - intent: RubiksCubeSolverProject
+  - action: utter_rcs_info
+
+- story: rcs_3
+  steps:
+  - intent: RubiksCubeSolverVideoLink
+  - action: utter_link_rcs
+  - action: action_open_rcs_video_link
+
+- story: ats_1
+  steps:
+  - intent: TrafficAnalysisProjectInfo
+  - action: utter_ats_info
+  - checkpoint: uuu
+
+- story: ats1.5
+  steps:
+  - checkpoint: uuu
+  - intent: ask_project_link_ingeneral
+  - action: utter_ats_link
+  - action: action_open_ssb_video_link
+
+- story: ats_2
+  steps:
+  - intent: TrafficAnalysisProjectMembers
+  - action: utter_ats_info
+
+- story: ats_3
+  steps:
+  - intent: TrafficAnalysisProjectLink
+  - action: utter_ats_link
+  - action: action_open_ats_video_link
+
+- story: vtt_1
+  steps:
+  - intent: VoiceToTranscriptProjectInfo
+  - action: utter_vtt_info
+  - checkpoint: hhh
+
+- story: self_balancing_bot1.5
+  steps:
+  - checkpoint: hhh
+  - intent: ask_project_link_ingeneral
+  - action: utter_vtt_link
+  - action: action_open_ssb_video_link
+
+- story: vtt_2
+  steps:
+  - intent: VoiceToTranscriptProjectMembers
+  - action: utter_vtt_info
+
+- story: vtt_3
+  steps:
+  - intent: VoiceToTranscriptProjectLink
+  - action: utter_vtt_link
+  - action: action_open_vtt_video_link
+
+- story: s1
+  steps:
+  - intent: MusicGenreProjectTimeSchedule
+  - action: utter_schedule_mcg
+
+- story: s2
+  steps:
+  - intent: TrafficAnalysisProjectTimeSchedule
+  - action: utter_schedule_ats
+
+- story: s3
+  steps:
+  - intent: RubiksCubeProjectTimeSchedule
+  - action: utter_schedule_rcs
+
+- story: s4
+  steps:
+  - intent: SelfBalancingBotProjectTimeSchedule
+  - action: utter_schedule_sbb
+
+- story: s5
+  steps:
+  - intent: VoiceToTranscriptProjectTimeSchedule
+  - action: utter_schedule_vtt
+
+- story: query_submit
+  steps:
+  - intent: nlu_fallback
+  # - action: utter_out_of_scope
+  - action: action_fallback
+  # - action: utter_askquery
+
+- story: Get_Schedule
+  steps:
+    - intent: get_schedule
+    - action: action_gsheet
+
+- story: Get_time
+  steps:
+    - intent: inquire_event
+    - action: action_inquire_event
