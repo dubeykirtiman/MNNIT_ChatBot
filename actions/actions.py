@@ -150,9 +150,47 @@ class sdbndnsdjvs(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
+        scopes={
+        'https://www.googleapis.com/auth/spreadsheets',
+        'https://www.googleapis.com/auth/drive'
+        }
+        nlp = spacy.load("en_core_web_md")
+        user_input = tracker.latest_message.get("text")
+        creds=ServiceAccountCredentials.from_json_keyfile_name("C:\\rasa2.o\\botrushchatbot-59e97e76d71a.json",scopes=scopes)
+        file=gspread.authorize(creds)
+        workbook=file.open("Final Evaluation Schedule(Match and engage)")
+        sheet=workbook.sheet1
+        # print(sheet.range('B5:B12'))
+        data = sheet.get_all_values()
+        # print(data)
+        team_schedule = {}
+        for row in data[4:]:
+            team_name = row[1]
+            team_time = row[2]
+            team_name = team_name.lower()
+            team_schedule[team_name.rstrip()]= team_time
+        userstring = tracker.get_slot('team')
+        if(userstring!=None):
+            userstring = userstring.lower()
+            f=user_input.split()
+            print("this is running")
+            for i in f:
+                if(userstring==i.lower()):
+                    if userstring in team_schedule.keys():
+                        response = f"The schedule for {userstring} is at {team_schedule[userstring]}."
+                    else:
+                        response = f"Sorry, I don't have the schedule information for {userstring}."
+                    dispatcher.utter_message(response)
+                    return[]
+        print(type(userstring))
+        print(userstring)
+        team_schedule = {}
+        for row in data[4:]:
+            team_name = row[1]
+            team_time = row[2]
+            team_name = team_name.lower()
+            team_schedule[team_name.rstrip()]= team_time
         try:
-            nlp = spacy.load("en_core_web_md")
-            user_input = tracker.latest_message.get("text")
             s=len(user_input.split())
             k=user_input.split()
             t=len(user_input)
@@ -334,6 +372,8 @@ class DisplaywebAction(Action):
             response = f"The schedule for {user_team} is at {team_schedule[user_team]}."
         else:
             response = f"Sorry, I don't have the schedule information for {user_team}."
+
+        print(response)
 
         dispatcher.utter_message(response)
         return[]
