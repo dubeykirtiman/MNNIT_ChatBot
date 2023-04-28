@@ -138,6 +138,22 @@ intents:
   - imagebotrush
   - Bot_rush_schedule
   # Kirtiman domain
+  - CSE_dept
+  - CSE_dept_HOD
+  - ECE_dept
+  - ECE_dept_HOD
+  - EE_dept
+  - EE_dept_HOD
+  - ME_dept
+  - ME_dept_HOD
+  - ChE_Dept
+  - ChE_Dept_HOD
+  - CE_dept
+  - CE_dept_HOD
+  - BE_dept
+  - BE_dept_HOD
+  - PIE_dept
+  - PIE_dept_HOD
   - humanoid_info
   - humanoid_member
   - humanoid_link
@@ -156,6 +172,9 @@ intents:
   - RoboticArm_info
   - RoboticArm_member
   - RoboticArm_link
+  - startc
+  - fc
+  - goingon
   - get_schedule:
       use_entities: team
   - inquire_event:
@@ -334,6 +353,7 @@ actions:
   - utter_followup
   - utter_infoaboutrx
   - utter_projectrx
+  - utter_fc
   - utter_organizersrx
   - utter_doh
   - utter_mnes
@@ -345,12 +365,34 @@ actions:
   - utter_sdoh4
   - utter_Bot_Rush
   - utter_BotRushschedule
+  - utter_goingon 
   # we have added
   - utter_roborxpoproj
   - utter_botrushevents
   - utter_imagebotrush
   # - utter_out_of_scope
   # - utter_askquery
+
+#About departments and their HODs
+  - CSE_dept
+  - CSE_dept_HOD
+  - IT_dept
+  - IT_dept_HOD
+  - ECE_dept
+  - ECE_dept_HOD
+  - EE_dept
+  - EE_dept_HOD
+  - ME_dept
+  - ME_dept_HOD
+  - ChE_Dept
+  - ChE_Dept_HOD
+  - CE_dept
+  - CE_dept_HOD
+  - BE_dept
+  - BE_dept_HOD
+  - PIE_dept
+  - PIE_dept_HOD
+
   
 responses:
   utter_gesturecontrol:
@@ -694,7 +736,8 @@ responses:
   utter_gym:
   - text : "Yes, Gym also present in the campus separate gym for  both boys 🏋️ and girls 🏋️‍♀️"
 
-
+  utter_goingon :
+  - text : " Botrush Event is currently going on ."
   utter_cordinator:
     - text : "Cordinator Name: Purushottam Agarwal , Anurag, Mehul, Amit All are Final year Students"
   utter_director:
@@ -1060,7 +1103,19 @@ responses:
          3.) App Development "
 
   utter_chatbotproj:
-  - text: "no schedule set yet"
+  - text: " This project is a Chatbot that simulate human conversation and handles context, chitchat, and other complex things, which are otherwise
+          very common in human conversation . Our Bot will provide information about our college and will provide details of the mega event BotRush, 2k23 . 
+          Moreover , It will also provide awesome answers of all general questions .
+          Contributors :-
+          Sneha Chaturvedi       20218004        ChE \n
+          Bhanu Pratap Singh  	 20210010     BT \n
+          Sarthak Kumar            20215089       ECE \n
+          Kirtiman Dubey           20215005        ECE \n
+          Mentors :-
+          Anurag Gupta       20195168   ECE \n
+          Shashank Singh   20202085      EE  \n
+          Ankit Gupta          20202017      EE \n
+          "
 
   utter_bye:
   - text: "bye , thanks for using "
@@ -1148,7 +1203,7 @@ responses:
         Do you have what it takes to help Optimus Prime and save Earth from the Decepticons? Prove your mettle in Botrush and earn your place in history as the liberator of Earth!
         "       
   utter_cellphone_controlled_car_rule:
-  - text: "visit the link for all details https://docs.google.com/document/d/1COADr-NGwhsAxUgNQZIk3wQkQsfl47CBERjD359WJqA/edit"
+  - text: "vis it the link for all details https://docs.google.com/document/d/1COADr-NGwhsAxUgNQZIk3wQkQsfl47CBERjD359WJqA/edit"
   
   utter_usechatbot:
   - text: "1.) Greeting: This chatbot is able to greet the user and introduce itself.
@@ -1182,7 +1237,11 @@ responses:
            4.) linkedin.com/in/robotics-club-mnnit/"
 
   utter_start:
-  - text: " Hello , this is Robotics MNNIT chatbot . You can ask anything related to Botrush event ."
+  - text: " Hello! This is the Robotics Club's chatbot of MNNIT \n
+            I can perform the following task for you:\n
+            1. Give you almost any information about the BOT-RUSH Event\n
+            2. Give you info about MNNIT\n
+            3. Provide you any general info of the world till 2021 "
   
   utter_infoaboutrx:
   - text: "Robo Expo is an  robotics event that celebrates the creativity and innovation of college students across MNNIT. This exciting event provides a platform for these young inventors to showcase their latest projects and engage with like-minded individuals who share their passion for robotics.\n
@@ -1202,28 +1261,33 @@ responses:
   # We have added
   utter_botrushevents:
   - text: " Botrush events name are :
-            1.) Bumble See
-            2.) Match n Engage
-            3.) Decept of Home
-            4.) Meepmop
-            5.) RoboExpo
+            1.) Bumble See \n
+            2.) Match n Engage \n
+            3.) Decept of Home \n
+            4.) Meepmop \n
+            5.) RoboExpo \n
             "
 
+  utter_fc:
+  - text: " Event coordinator of botrush event : \n
+            Final Year : Purushottam  agarwal , Mehul Singhal , Anurag Gupta , Amit Gupta\n
+            Third Year : Shashank Singh , Gautam Kumar ,  Prakhar agarwal , Abhishek hanotiya , Bipul Karna , Aditya jain , Ankit Gupta, Ayush singh gour , Shreya gupta , Kandukari yaswanth"
+             
   utter_roborxpoproj:
-  - text: " 1.) SDC - Path Planning
-            2.) Fire Fighting Bot
-            3.) X- Y Plotter Automatic Sorting Machine
-            4.) Humanoid/Biped Robot
-            5.) Mapping and Navigation Robot
-            6.) Self Balancing Bot
-            7.) Gesture Control Bots
-            8.) Target Hitting Bot
-            9.) Room Automation
-            10.) Music Genre Classification
-            11.) SDC - ROS Stack
-            12.) Robotic Arm Rubik’s Cube Solver
-            13.) Spider Bot 
-            14.) Road Lane Detection"
+  - text: " 1.) SDC - Path Planning \n
+            2.) Fire Fighting Bot \n
+            3.) X- Y Plotter Automatic Sorting Machine \n
+            4.) Humanoid/Biped Robot \n
+            5.) Mapping and Navigation Robot \n
+            6.) Self Balancing Bot \n
+            7.) Gesture Control Bots \n
+            8.) Target Hitting Bot \n
+            9.) Room Automation \n
+            10.) Music Genre Classification \n
+            11.) SDC - ROS Stack \n
+            12.) Robotic Arm Rubik’s Cube Solver \n
+            13.) Spider Bot \n
+            14.) Road Lane Detection \n"
   
   utter_imagebotrush:
   - text: " The images link of botrush is => "
@@ -1253,8 +1317,6 @@ responses:
           Youtube : https://youtu.be/dXhq2luH1s8
         "
 
-
-
   utter_XYPlotterInfo:
   - text:
         "Not yet completed  "  
@@ -1268,8 +1330,6 @@ responses:
         " WebPage : Not yet completed .
           Youtube : 
         "
-
-
 
   utter_AutoChessBoardInfo:
   - text:
@@ -1285,8 +1345,6 @@ responses:
           Youtube : 
         "
 
-
-
   utter_RoboRoomAutomationInfo:
   - text:
         "Not yet completed "
@@ -1300,8 +1358,6 @@ responses:
         " WebPage : Not yet completed .
           Youtube : 
         "
-
-
 
   utter_SpiderBotInfo:
   - text:
@@ -1317,8 +1373,6 @@ responses:
           Youtube : 
         "
 
-
-
   utter_RoboArmInfo:
   - text:
         "Not yet completed  "
@@ -1332,6 +1386,113 @@ responses:
         " WebPage : Not yet completed .
           Youtube : 
         "
+ #About departments and their HODs
+  utter_CSE_dept:
+  - text:
+        " The Computer Science and Engineering (CSE) Department at the Motilal Nehru National Institute of Technology (MNNIT) is one of the most prestigious and sought-after departments in the institute. The department offers undergraduate, postgraduate, and research programs in Computer Science and Engineering.
+        The department has a highly qualified faculty with expertise in various areas of computer science and engineering. The faculty members are actively engaged in research and have published papers in reputed international journals and conferences. The department also has state-of-the-art infrastructure with well-equipped labs, modern classrooms, and a well-stocked library.
+        Graduates from the department are highly sought after by top companies in the IT industry, and also have the opportunity to pursue research and academic careers in prestigious institutions around the world.
+        "
+
+  utter_CSE_dept_HOD:
+  - text:
+        " The head of department of Computer Science and Engineering Department is Dr. D.K. Yadav
+        "
+
+  utter_ECE_dept:
+  - text:
+        " The Electronics and Communication Engineering (ECE) Department at Motilal Nehru National Institute of Technology (MNNIT) is one of the premier engineering departments in the country. The department offers undergraduate, postgraduate, and research programs in Electronics and Communication Engineering.
+         The undergraduate program in ECE at MNNIT is a four-year program that covers a wide range of topics, including electronic circuits, signals and systems, communication systems, digital signal processing, microprocessors, VLSI design, and control systems.
+         The postgraduate program in ECE at MNNIT is a two-year program that offers advanced courses in areas such as wireless communication, digital communication, microelectronics, VLSI design, and embedded systems.
+         The department has a highly qualified faculty with expertise in various areas of electronics and communication engineering. The faculty members are actively engaged in research and have published papers in reputed international journals and conferences.
+         The department has several research groups, including the Signal Processing Group, Communication and Networking Group, and VLSI Design Group, that are actively involved in research in cutting-edge technologies.
+         The department also collaborates with leading academic and research institutions, as well as with industry partners, to offer students research and internship opportunities.
+        "
+
+  utter_ECE_dept_HOD:
+  - text:
+        " The head of department of Electronics and Communication Engineering Department is Dr. R.A. Mishra
+        "
+
+  utter_EE_dept:
+  - text:
+        " The Electrical Engineering Department at Motilal Nehru National Institute of Technology (MNNIT) is one of the oldest and most prestigious departments in the institute. The department was established in 1961 and has since then been offering undergraduate, postgraduate, and doctoral programs in Electrical Engineering.
+        The department has well-qualified faculty members who are actively involved in teaching and research in various areas of Electrical Engineering such as Power Systems, Control Systems, Power Electronics, Electrical Machines, Signal Processing, and Communication Systems. The faculty members are also involved in collaborative research with other institutions and industries.
+        The department also offers various opportunities for students to participate in extracurricular activities such as technical clubs, student chapters of professional societies, and industry-sponsored projects.
+        "
+
+  utter_EE_dept_HOD:
+  - text:
+        " The head of department of Electrical Engineering Department is Prof. Rajesh Gupta
+        "
+
+  utter_ME_dept:
+  - text:
+        " The Department of Mechanical Engineering at Motilal Nehru National Institute of Technology (MNNIT) is one of the most prestigious departments of the institute. The department offers undergraduate, postgraduate, and doctoral programs in Mechanical Engineering.
+        The undergraduate program in Mechanical Engineering is a four-year program and covers various core areas such as mechanics, thermodynamics, materials science, manufacturing, design, and automation. 
+        The postgraduate program in Mechanical Engineering includes specializations in areas such as Manufacturing Technology, Thermal Engineering, and Design Engineering. The department also offers a PhD program in Mechanical Engineering, where students can pursue research in various areas of mechanical engineering.
+        The department has a highly qualified and experienced faculty who are actively involved in research and teaching. The faculty members have published numerous research papers in reputed international journals and conferences.
+        The department has a placement record of more than 90% with students being placed in reputed companies such as Tata Motors, Mahindra and Mahindra, General Motors, and Larsen & Toubro, among others.
+        "
+
+  utter_ME_dept_HOD:
+  - text:
+        " The head of department of Mechanical Engineering Department is Prof. K N Pandey
+        "
+
+  utter_ChE_Dept:
+  - text:
+        " The Chemical Engineering Department at MNNIT offers undergraduate, postgraduate, and doctoral programs in Chemical Engineering. The department has a team of highly qualified and experienced faculty members who are actively involved in research and development activities.
+        The undergraduate program in Chemical Engineering at MNNIT covers topics such as thermodynamics, transport phenomena, process control, chemical reaction engineering, and process design.
+        The postgraduate program includes advanced topics such as computational fluid dynamics, process simulation, process optimization, and sustainable energy systems.
+        The department has well-equipped laboratories for conducting experiments and research in various areas of Chemical Engineering. The research activities of the department focus on areas such as renewable energy, environmental engineering, process intensification, and nanotechnology.
+        The Chemical Engineering Department at MNNIT also has collaborations with various industries and research institutions in India and abroad.
+        "
+
+  utter_ChE_Dept_HOD:
+  - text:
+        " The head of department of Chemical Engineering Department is Prof. Sadhana Sachan
+        "
+
+  utter_CE_dept:
+  - text:
+        " The Civil Engineering Department at Motilal Nehru National Institute of Technology (MNNIT) is one of the oldest and most reputed departments at the institute. It was established in the year 1961.
+        The department offers undergraduate, postgraduate, and doctoral programs in Civil Engineering. The undergraduate program is a four-year course leading to a Bachelor of Technology (B.Tech) degree in Civil Engineering. 
+        The postgraduate program includes a two-year Master of Technology (M.Tech) course in Structural Engineering, Environmental Engineering, Geotechnical Engineering, and Transportation Engineering. The department also offers a Ph.D. program in various specializations.
+        The department has well-equipped laboratories for testing materials, soil mechanics, concrete, and structural engineering. The faculty members are highly qualified and experienced, with many of them holding Ph.D. degrees from reputed institutes. They actively engage in research and consultancy work in various fields of Civil Engineering, such as earthquake engineering, environmental engineering, transportation engineering, etc.
+        The Civil Engineering Society (CES) is a student-run organization that organizes technical events, workshops, and seminars to help students enhance their skills and knowledge.
+        "
+
+  utter_CE_dept_HOD:
+  - text:
+        " The head of department of Civil Engineering Department is Dr. P.K Mehata
+        "
+
+  utter_BE_dept:
+  - text:
+        "Motilal Nehru National Institute of Technology (MNNIT) offers a Bachelor of Technology (B.Tech) program in Biotechnology. The Department of Biotechnology at MNNIT aims to impart quality education and research opportunities to students in the field of Biotechnology.
+        The department has well-equipped laboratories with advanced instruments and infrastructure to provide hands-on experience to students. The curriculum of the program covers various aspects of Biotechnology, including Molecular Biology, Genetic Engineering, Microbiology, Biochemistry, Immunology, and Bioprocess Engineering.
+        Apart from academics, the department also encourages students to participate in various extracurricular activities, including workshops, seminars, conferences, and industrial visits, to enhance their knowledge and skills.
+         The faculty members also guide students in their research projects and help them in developing their skills in problem-solving and critical thinking.
+        "
+
+  utter_BE_dept_HOD:
+  - text:
+        " The head of department of Biotechnology Engineering Department is Dr. Sangeeta Negi
+        "
+
+  utter_PIE_dept:
+  - text:
+        " The department of Production and Industrial Engineering at MNNIT aims to equip students with a strong foundation in engineering principles and practical skills to address real-world challenges in the industry.
+        The curriculum of Production and Industrial Engineering at MNNIT covers a wide range of topics such as manufacturing processes, quality control, production planning and scheduling, supply chain management, operations research, lean manufacturing, and industrial automation. Students also get to work on projects and undertake internships to gain hands-on experience and exposure to industry practices.
+        Graduates of Production and Industrial Engineering from MNNIT are highly sought after by industries such as automotive, aerospace, electronics, and manufacturing, as they possess a unique skill set that enables them to optimize production processes, improve quality and productivity, and reduce costs.
+        "
+
+  utter_PIE_dept_HOD:
+  - text:
+        " The head of department of Production and Industrial Engineering Department is same as that of Mechanical Engineering , that is , Prof. K N Pandey
+        "
+ 
 
 # forms:
 #   health_form:
